@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos de nous | Matchever</title>
+  <meta name="description" content="Découvrez l'histoire, la mission et l'équipe derrière Matchever, l'application d'adoption animale par affinité de personnalité.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="sr-only" tabindex="0">Aller directement au contenu principal</a>
+
+  <header class="header" id="header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+        <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="28" height="28">
+        <span>Matchever</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+        <a href="about.html" class="nav-link nav-link-active">À propos</a>
+        <a href="refuge.html" class="nav-link">Refuges</a>
+        <a href="eleveur.html" class="nav-link">Éleveurs</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-cta">
+          <a href="index.html#download" class="btn btn-primary">Télécharger l'app</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero" id="page-top">
+      <div class="page-hero-orb page-hero-orb-1" aria-hidden="true"></div>
+      <div class="page-hero-orb page-hero-orb-2" aria-hidden="true"></div>
+      <div class="container page-hero-content">
+        <span class="section-tag">💡 Notre histoire</span>
+        <h1>Nous croyons que chaque animal mérite <span class="text-gradient">le foyer parfait</span>.</h1>
+        <p>Née d'une passion pour les animaux et d'une frustration face aux adoptions ratées, Matchever est bien plus qu'une application — c'est un mouvement pour l'adoption responsable.</p>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true" onclick="document.getElementById('mission').scrollIntoView({behavior:'smooth'})">
+        <div class="scroll-indicator-wheel"></div>
+        Défiler
+      </div>
+    </section>
+
+    <!-- Bento Stats Grid -->
+    <section class="content-section reveal" id="mission" style="padding: 80px 0;">
+      <div class="container">
+        <div class="bento-grid">
+
+          <!-- Mission wide card -->
+          <div class="bento-card bento-wide" style="background: linear-gradient(135deg, var(--text-primary) 0%, #2d3748 100%); color: white;">
+            <div class="bento-card-icon" style="background: rgba(229,62,66,0.15); color: var(--primary);">🎯</div>
+            <h3 style="color:white; font-size: 1.6rem; margin-bottom: 14px;">Zéro retour en refuge. 100% d'adoptions réussies.</h3>
+            <p style="color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 560px;">Matchever a été créé avec un objectif clair : utiliser la technologie pour résoudre un problème humain et animal. Chaque année en France, plus de 100 000 animaux retournent dans les refuges après une adoption ratée.</p>
+            <div style="display:flex; gap:32px; margin-top: 28px; flex-wrap:wrap;">
+              <div>
+                <div class="bento-stat-big" style="font-size: 3rem;">40+</div>
+                <div class="bento-stat-label">critères comportementaux</div>
+              </div>
+              <div>
+                <div class="bento-stat-big" style="font-size: 3rem;">98%</div>
+                <div class="bento-stat-label">taux de réussite</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Éthique card -->
+          <div class="bento-card bento-narrow" style="background: linear-gradient(135deg, var(--primary-light), rgba(231,111,81,0.08));">
+            <div class="bento-card-icon">🌱</div>
+            <h3>Éthique</h3>
+            <p>Jamais de commerce d'animaux. Seulement des adoptions responsables et durables.</p>
+          </div>
+
+          <!-- Solidarité -->
+          <div class="bento-card bento-half" style="background: linear-gradient(135deg, var(--secondary-light), rgba(42,157,143,0.06));">
+            <div class="bento-card-icon secondary">🤝</div>
+            <h3>Solidarité</h3>
+            <p>Gratuit pour tous les refuges et associations de protection animale en France.</p>
+          </div>
+
+          <!-- Science -->
+          <div class="bento-card bento-half">
+            <div class="bento-card-icon secondary">🔬</div>
+            <h3>Science</h3>
+            <p>Un algorithme basé sur la recherche comportementale animale et humaine, validé par des experts vétérinaires.</p>
+          </div>
+
+          <!-- Big stat -->
+          <div class="bento-card bento-third" style="text-align: center; background: linear-gradient(160deg, var(--primary-light), #fff8f0); border: 1.5px solid rgba(229,62,66,0.15);">
+            <div class="bento-stat-big">50k+</div>
+            <div class="bento-stat-label">adoptions réussies</div>
+          </div>
+
+          <div class="bento-card bento-third" style="text-align: center; background: linear-gradient(160deg, var(--secondary-light), #f0fff8); border: 1.5px solid rgba(42,157,143,0.15);">
+            <div class="bento-stat-big" style="background: linear-gradient(135deg, var(--secondary), var(--secondary-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">150+</div>
+            <div class="bento-stat-label">refuges partenaires</div>
+          </div>
+
+          <div class="bento-card bento-third" style="text-align: center;">
+            <div class="bento-stat-big">4.9</div>
+            <div class="bento-stat-label" style="font-size: 1rem;">⭐⭐⭐⭐⭐ sur l'App Store</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre Mission — Image + Values -->
+    <section class="content-section reveal" style="background: var(--bg-secondary); padding: 100px 0;">
+      <div class="container two-col-grid">
+        <div class="two-col-text">
+          <span class="section-tag">🎯 Notre mission</span>
+          <h2 class="section-title">Une technologie au service de l'amour animal.</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 8px;">Notre algorithme de compatibilité, basé sur 40+ critères comportementaux et de mode de vie, identifie les paires adoptant-animal avec un taux de réussite de 98%. Parce qu'une adoption doit être pour la vie.</p>
+
+          <div class="mission-values">
+            <div class="mission-value">
+              <span class="mission-value-icon">🌱</span>
+              <div>
+                <strong>Éthique avant tout</strong>
+                <p>Jamais de commerce d'animaux. Seulement des adoptions responsables.</p>
+              </div>
+            </div>
+            <div class="mission-value">
+              <span class="mission-value-icon">🤝</span>
+              <div>
+                <strong>Solidarité concrète</strong>
+                <p>Gratuit pour tous les refuges et associations de protection animale.</p>
+              </div>
+            </div>
+            <div class="mission-value">
+              <span class="mission-value-icon">🔬</span>
+              <div>
+                <strong>Science comportementale</strong>
+                <p>Un algorithme basé sur la recherche comportementale animale et humaine.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="two-col-visual">
+          <div class="about-visual">
+            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&q=80&w=600" alt="Un enfant avec un chiot - symbole d'une adoption réussie">
+            <!-- Floating stat overlays -->
+            <div class="about-stat-overlay">
+              <div class="overlay-icon">🐾</div>
+              <div>
+                <div class="overlay-stat-num">50 000</div>
+                <div class="overlay-stat-label">adoptions réussies</div>
+              </div>
+            </div>
+            <div class="about-stat-overlay about-stat-overlay-2">
+              <div class="overlay-icon green">✅</div>
+              <div>
+                <div class="overlay-stat-num">98%</div>
+                <div class="overlay-stat-label">taux de satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre équipe -->
+    <section class="team-section reveal" id="equipe" style="padding: 100px 0;">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;">
+          <span class="section-tag section-tag-secondary">👥 Notre équipe</span>
+          <h2 class="section-title">Des passionnés d'animaux &amp; de technologie.</h2>
+          <p class="section-desc">Une équipe pluridisciplinaire unie par la même conviction : la technologie peut sauver des vies animales.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-img">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300" alt="Sophie Martin, fondatrice de Matchever">
+            </div>
+            <h3>Sophie Martin</h3>
+            <p class="team-role">Co-fondatrice &amp; CEO</p>
+            <p class="team-bio">Vétérinaire de formation, ancienne bénévole SPA. A fondé Matchever après avoir vécu trop d'adoptions ratées.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-img">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300" alt="Lucas Bernard, CTO de Matchever">
+            </div>
+            <h3>Lucas Bernard</h3>
+            <p class="team-role">Co-fondateur &amp; CTO</p>
+            <p class="team-bio">Ingénieur en IA et machine learning. A conçu l'algorithme de matching comportemental au cœur de Matchever.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-img">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=300" alt="Clara Dupont, responsable partenariats">
+            </div>
+            <h3>Clara Dupont</h3>
+            <p class="team-role">Responsable Partenariats</p>
+            <p class="team-bio">Ancienne directrice de refuge, Clara coordonne les relations avec nos 150+ refuges partenaires à travers la France.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-img">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300" alt="Antoine Leroi, responsable design">
+            </div>
+            <h3>Antoine Leroi</h3>
+            <p class="team-role">Lead Designer</p>
+            <p class="team-bio">Designer produit passionné par l'UX accessible. Il s'assure que Matchever soit utilisable par tous.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actualité -->
+    <section class="news-section reveal" id="actualite" style="background: var(--bg-secondary); padding: 100px 0;">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;">
+          <span class="section-tag">📰 Actualité</span>
+          <h2 class="section-title">Les dernières nouvelles de Matchever.</h2>
+        </div>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-img">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=600" alt="Chien en refuge attendant son adoption">
+            </div>
+            <div class="news-content">
+              <span class="news-date">Juin 2026</span>
+              <h3>Matchever atteint les 50 000 adoptions réussies !</h3>
+              <p>Un cap historique pour notre plateforme. 50 000 animaux ont trouvé leur foyer permanent grâce à notre algorithme de matching.</p>
+              <a href="#" class="news-link">Lire la suite →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=600" alt="Deux chiens courant ensemble">
+            </div>
+            <div class="news-content">
+              <span class="news-date">Mai 2026</span>
+              <h3>Nouveau partenariat avec la Fondation 30 Millions d'Amis</h3>
+              <p>Matchever et la Fondation 30 Millions d'Amis unissent leurs forces pour sensibiliser encore plus d'adoptants en France.</p>
+              <a href="#" class="news-link">Lire la suite →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-img">
+              <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?auto=format&fit=crop&q=80&w=600" alt="Chat tigré regardant par une fenêtre">
+            </div>
+            <div class="news-content">
+              <span class="news-date">Avril 2026</span>
+              <h3>Lancement de la fonctionnalité "Urgence Adoption"</h3>
+              <p>Les refuges peuvent désormais signaler des animaux en urgence d'adoption, avec une visibilité prioritaire sur toute la plateforme.</p>
+              <a href="#" class="news-link">Lire la suite →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+          <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="24" height="24">
+          <span>Matchever</span>
+        </a>
+        <p>L'application solidaire qui réinvente l'adoption animale.</p>
+      </div>
+      <div class="footer-col">
+        <h4>À propos</h4>
+        <ul class="footer-links">
+          <li><a href="#mission">Notre mission</a></li>
+          <li><a href="#equipe">Notre équipe</a></li>
+          <li><a href="#actualite">Actualité</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Matchever</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="refuge.html">Refuges</a></li>
+          <li><a href="eleveur.html">Éleveurs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="terms.html">CGU</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Matchever. Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html">CGU</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

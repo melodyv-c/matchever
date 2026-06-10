@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://matchever.fr/">
   <meta property="og:title" content="Matchever | L'adoption d'animaux par affinité de personnalité">
   <meta property="og:description"
-    content="Trouvez votre compagnon idéal en refuge grâce à notre test de personnalité interactif. Téléchargez gratuitement l'application.">
+    content="Trouvez votre compagnon idéal en refuge grâce à notre algorithme de matching. Téléchargez gratuitement l'application.">
   <meta property="og:image"
     content="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200">
 
@@ -26,13 +26,12 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Matchever | L'adoption d'animaux par affinité">
   <meta property="twitter:description"
-    content="Trouvez votre compagnon idéal en refuge grâce à notre test de personnalité interactif.">
+    content="Trouvez votre compagnon idéal en refuge grâce à notre algorithme de matching.">
   <meta property="twitter:image"
     content="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200">
 
-  <!-- Favicon (Fallback Emoji representation) -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+  <!-- Favicon – Logo Matchever -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
@@ -46,11 +45,8 @@
   <!-- Header / Navigation -->
   <header class="header" id="header" role="banner">
     <div class="container header-container">
-      <a href="#" class="logo" aria-label="Matchever - Retour à l'accueil">
-        <svg class="logo-heart" width="28" height="28" viewBox="0 0 160 160" fill="currentColor" aria-hidden="true">
-          <path
-            d="M151.418 137.667L119.723 137.744C117.818 137.747 116.35 136.688 115.79 134.912L103.461 92.102C103.144 91.1023 86.847 104.865 80.2548 104.82C72.2499 104.766 56.8578 90.6018 56.8578 90.6018C57.6647 91.4264 50.9873 114.034 50.6181 115.18L44.1466 135.125C43.7065 136.486 42.4607 137.683 40.912 137.686L9.2475 137.747C8.02536 137.751 7.06232 137.449 6.38204 136.676C5.68046 135.883 5.26164 134.639 5.65206 133.421L15.2174 103.599L26.7183 67.574C25.2324 60.0151 24.5119 52.4575 24.881 44.7543C25.075 40.6857 25.5553 36.6548 26.4072 32.669C26.6355 31.6077 26.936 30.6127 27.2294 29.5764C27.7583 27.6775 28.6823 25.1906 29.9127 23.6147C30.6888 22.6268 32.2517 22.1926 33.5129 22.3311C35.0213 22.4967 36.2825 22.9593 37.6088 23.6573C42.7848 26.3867 47.3611 29.9384 51.3623 34.0745C55.7232 38.5857 59.2867 43.6328 62.2326 49.0715C73.6897 45.9232 85.9573 45.9504 97.4428 48.991C101.114 43.0365 105.361 37.496 110.482 32.5755C112.63 30.5228 114.879 28.5967 117.305 26.8458C118.496 25.9868 119.709 25.2178 120.976 24.4725C122.465 23.5982 124.585 22.5831 126.254 22.2542H127.159C128.47 22.4576 129.704 23.0303 130.449 24.1282C131.757 26.0614 132.702 28.6547 133.295 30.8801C133.68 32.3235 134.016 33.7326 134.289 35.2103C134.895 38.4756 135.21 41.7587 135.311 45.0773C135.542 52.4599 134.671 59.8152 133.249 67.0569L138.798 84.4178L154.33 133.138C154.997 135.233 153.634 137.664 151.418 137.668V137.667Z" />
-        </svg>
+      <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+        <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="28" height="28">
         <span>Matchever</span>
       </a>
 
@@ -67,10 +63,12 @@
 
       <!-- Navigation sémantique -->
       <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
-        <a href="#concept" class="nav-link">Concept</a>
-        <a href="#quiz" class="nav-link">Le Quiz</a>
-        <a href="#showcase" class="nav-link">Nos Animaux</a>
-        <a href="#testimonials" class="nav-link">Témoignages</a>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="refuge.html" class="nav-link">Refuges</a>
+        <a href="eleveur.html" class="nav-link">Éleveurs</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <div class="nav-cta">
           <a href="#download" class="btn btn-primary" id="header-cta-btn">Télécharger l'app</a>
         </div>
@@ -121,7 +119,7 @@
               <span class="hero-rating" aria-label="Note de 4.9 sur 5 étoiles">
                 ★★★★★
               </span>
-              <span>Plus de 50 000 adoptions réussies • Gratuit & solidaire</span>
+              <span>Plus de 50 000 adoptions réussies • Gratuit &amp; solidaire</span>
             </div>
           </div>
         </div>
@@ -133,7 +131,7 @@
             <div class="float-icon">🐾</div>
             <div class="float-text">
               <p>Match à 98% !</p>
-              <h4>Tobby & Thomas</h4>
+              <h4>Tobby &amp; Thomas</h4>
             </div>
           </div>
 
@@ -152,10 +150,7 @@
             <div class="phone-screen">
               <div class="screen-header">
                 <div class="screen-logo">
-                  <svg width="18" height="18" viewBox="0 0 160 160" fill="currentColor">
-                    <path
-                      d="M151.418 137.667L119.723 137.744C117.818 137.747 116.35 136.688 115.79 134.912L103.461 92.102C103.144 91.1023 86.847 104.865 80.2548 104.82C72.2499 104.766 56.8578 90.6018 56.8578 90.6018C57.6647 91.4264 50.9873 114.034 50.6181 115.18L44.1466 135.125C43.7065 136.486 42.4607 137.683 40.912 137.686L9.2475 137.747C8.02536 137.751 7.06232 137.449 6.38204 136.676C5.68046 135.883 5.26164 134.639 5.65206 133.421L15.2174 103.599L26.7183 67.574C25.2324 60.0151 24.5119 52.4575 24.881 44.7543C25.075 40.6857 25.5553 36.6548 26.4072 32.669C26.6355 31.6077 26.936 30.6127 27.2294 29.5764C27.7583 27.6775 28.6823 25.1906 29.9127 23.6147C30.6888 22.6268 32.2517 22.1926 33.5129 22.3311C35.0213 22.4967 36.2825 22.9593 37.6088 23.6573C42.7848 26.3867 47.3611 29.9384 51.3623 34.0745C55.7232 38.5857 59.2867 43.6328 62.2326 49.0715C73.6897 45.9232 85.9573 45.9504 97.4428 48.991C101.114 43.0365 105.361 37.496 110.482 32.5755C112.63 30.5228 114.879 28.5967 117.305 26.8458C118.496 25.9868 119.709 25.2178 120.976 24.4725C122.465 23.5982 124.585 22.5831 126.254 22.2542H127.159C128.47 22.4576 129.704 23.0303 130.449 24.1282C131.757 26.0614 132.702 28.6547 133.295 30.8801C133.68 32.3235 134.016 33.7326 134.289 35.2103C134.895 38.4756 135.21 41.7587 135.311 45.0773C135.542 52.4599 134.671 59.8152 133.249 67.0569L138.798 84.4178L154.33 133.138C154.997 135.233 153.634 137.664 151.418 137.668V137.667Z" />
-                  </svg>
+                  <img src="logo.svg" alt="" width="18" height="18" aria-hidden="true">
                   <span>Matchever</span>
                 </div>
                 <div class="screen-profile-btn" aria-hidden="true"></div>
@@ -258,6 +253,124 @@
       </div>
     </section>
 
+    <!-- Le Problème Section -->
+    <section class="problem-story" id="probleme">
+
+      <!-- SCENE 1 -->
+
+      <div class="story-panel">
+        <span class="story-tag">😔 Le constat</span>
+
+        <h2>
+          Chaque année en France...
+        </h2>
+      </div>
+
+      <!-- SCENE 2 -->
+
+      <div class="story-panel">
+        <h2 class="huge-number">
+          +300 000
+        </h2>
+
+        <p>
+          animaux sont abandonnés chaque année.
+        </p>
+      </div>
+
+      <!-- SCENE 3 -->
+
+      <div class="story-panel">
+        <h2>
+          Pourtant...
+        </h2>
+
+        <p>
+          La plupart des abandons ne commencent pas par un problème.
+        </p>
+      </div>
+
+      <!-- SCENE 4 -->
+
+      <div class="story-panel">
+        <div class="story-emoji">💔</div>
+
+        <h2>
+          Ils commencent souvent par un coup de cœur.
+        </h2>
+
+        <p>
+          Un regard attendrissant. Une photo touchante.
+          Une rencontre qui nous fait craquer.
+        </p>
+      </div>
+
+      <!-- SCENE 5 -->
+
+      <div class="story-panel">
+        <h2>
+          Puis vient la réalité.
+        </h2>
+      </div>
+
+      <!-- SCENE 6 -->
+
+      <div class="story-panel">
+        <div class="problem-item">
+          🏠 Un logement peu adapté
+        </div>
+      </div>
+
+      <!-- SCENE 7 -->
+
+      <div class="story-panel">
+        <div class="problem-item">
+          ⏱️ Un manque de temps au quotidien
+        </div>
+      </div>
+
+      <!-- SCENE 8 -->
+
+      <div class="story-panel">
+        <div class="problem-item">
+          ⚡ Un niveau d'énergie incompatible
+        </div>
+      </div>
+
+      <!-- SCENE 9 -->
+
+      <div class="story-panel">
+        <div class="problem-item">
+          👨‍👩‍👧 Une vie familiale différente des besoins de l'animal
+        </div>
+      </div>
+
+      <!-- SCENE 10 -->
+
+      <div class="story-panel dark">
+        <h2>
+          Et si le problème n'était pas l'animal ?
+        </h2>
+      </div>
+
+      <!-- SCENE 11 -->
+
+      <div class="story-panel solution">
+        <div class="story-emoji">✨</div>
+
+        <h2>
+          Et si chaque adoption commençait par la compatibilité ?
+        </h2>
+
+        <p>
+          Matchever analyse plus de 40 critères comportementaux,
+          émotionnels et liés au mode de vie afin d'identifier
+          les animaux les plus compatibles avec chaque foyer.
+        </p>
+      </div>
+
+    </section>
+
     <!-- Concept Section -->
     <section class="concept reveal" id="concept">
       <div class="container text-center">
@@ -294,7 +407,7 @@
               </svg>
             </div>
             <h3>Découvrez vos Matchs</h3>
-            <p>Notre algorithme de matching analyse les profils des animaux des refuges locaux pour faire ressortir ceux
+            <p>Notre algorithme analyse les profils des animaux des refuges locaux pour faire ressortir ceux
               qui partagent vos rythmes de vie.</p>
           </article>
 
@@ -309,273 +422,9 @@
                 </path>
               </svg>
             </div>
-            <h3>Rencontrez & Adoptez</h3>
+            <h3>Rencontrez &amp; Adoptez</h3>
             <p>Une fois le match trouvé, entrez directement en contact avec le refuge partenaire pour organiser une
               visite et finaliser une adoption éthique.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mini-Quiz Section -->
-    <section class="quiz-section reveal" id="quiz">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">⚡ Faites l'essai</span>
-          <h2 class="section-title">Quel compagnon est fait pour vous ?</h2>
-          <p class="section-desc">Testez notre algorithme en 3 questions rapides et découvrez instantanément votre
-            premier match de refuge.</p>
-        </div>
-
-        <div class="quiz-container" id="quiz-widget">
-          <!-- Progress bar -->
-          <div class="quiz-progress" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-            aria-label="Progression du questionnaire">
-            <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
-          </div>
-
-          <!-- Step 1 -->
-          <div class="quiz-step active" data-step="1">
-            <h3 class="quiz-question-title" id="q1-title">1. Quel est votre niveau d'activité quotidien ?</h3>
-            <div class="quiz-options" role="radiogroup" aria-labelledby="q1-title">
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="sportif">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Très actif / Sportif</div>
-                  <div class="option-desc">J'aime la course à pied, les longues randonnées et passer du temps dehors.
-                  </div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="modere">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Modéré / Balades tranquilles</div>
-                  <div class="option-desc">Une promenade quotidienne me convient parfaitement, avec quelques jeux à la
-                    maison.</div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="calme">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Plutôt casanier / Calme</div>
-                  <div class="option-desc">Je préfère lire un livre, regarder des films ou travailler sereinement à la
-                    maison.</div>
-                </div>
-              </button>
-            </div>
-            <div class="quiz-footer-nav">
-              <span></span>
-              <button class="btn btn-primary" id="quiz-next-1" disabled>Continuer</button>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="quiz-step" data-step="2">
-            <h3 class="quiz-question-title" id="q2-title">2. De quel espace de vie disposez-vous ?</h3>
-            <div class="quiz-options" role="radiogroup" aria-labelledby="q2-title">
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="jardin">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Maison avec grand jardin clos</div>
-                  <div class="option-desc">Un grand espace extérieur sécurisé pour courir et s'amuser.</div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="balcon">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Appartement avec balcon ou terrasse</div>
-                  <div class="option-desc">Un logement cosy avec un espace de sortie sécurisé à l'air libre.</div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="interieur">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Appartement intérieur uniquement</div>
-                  <div class="option-desc">Un espace intérieur chaleureux mais sans accès extérieur direct.</div>
-                </div>
-              </button>
-            </div>
-            <div class="quiz-footer-nav">
-              <button class="btn btn-secondary" id="quiz-prev-2">Retour</button>
-              <button class="btn btn-primary" id="quiz-next-2" disabled>Continuer</button>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="quiz-step" data-step="3">
-            <h3 class="quiz-question-title" id="q3-title">3. Combien d'heures pouvez-vous accorder à l'animal ?</h3>
-            <div class="quiz-options" role="radiogroup" aria-labelledby="q3-title">
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="beaucoup">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Plus de 4 heures par jour</div>
-                  <div class="option-desc">Je travaille à domicile ou je suis disponible la majeure partie du temps.
-                  </div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="moyen">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Entre 1 et 3 heures par jour</div>
-                  <div class="option-desc">Je m'absente pour le travail mais je réserve mes soirées et matins pour lui.
-                  </div>
-                </div>
-              </button>
-              <button class="quiz-option" role="radio" aria-checked="false" data-value="peu">
-                <span class="option-dot"></span>
-                <div class="option-content">
-                  <div class="option-title">Moins d'une heure par jour</div>
-                  <div class="option-desc">Mon emploi du temps est très chargé mais je recherche une présence apaisante.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="quiz-footer-nav">
-              <button class="btn btn-secondary" id="quiz-prev-3">Retour</button>
-              <button class="btn btn-primary" id="quiz-submit" disabled>Calculer mon Match</button>
-            </div>
-          </div>
-
-          <!-- Loading Screen State -->
-          <div class="quiz-loading" id="quiz-loading">
-            <div class="spinner" aria-hidden="true"></div>
-            <h3 class="quiz-question-title">Analyse de vos habitudes...</h3>
-            <p>Notre algorithme recherche le profil le plus compatible parmi les 4 500 chiens et chats de nos refuges
-              partenaires.</p>
-          </div>
-
-          <!-- Quiz Result Screen -->
-          <div class="quiz-result" id="quiz-result">
-            <div class="quiz-result-grid">
-              <div class="result-card-preview">
-                <div class="result-img">
-                  <img id="result-pet-img" src="" alt="Photo de votre animal compatible">
-                  <span class="result-percentage" id="result-pet-pct">98% Match</span>
-                </div>
-                <div class="result-card-details">
-                  <div class="result-name" id="result-pet-name">Max</div>
-                  <div class="result-meta" id="result-pet-meta">Golden Retriever • Mâle • 2 ans</div>
-                  <div class="result-tags" id="result-pet-tags">
-                    <span class="result-tag primary">Sportif</span>
-                    <span class="result-tag">Sociable</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="result-info">
-                <h3>Votre match idéal est trouvé !</h3>
-                <p id="result-pet-desc">En fonction de votre niveau d'activité soutenu et de votre grand jardin clos,
-                  nous vous conseillons un profil énergique qui s'épanouira avec vous au quotidien.</p>
-
-                <div class="result-compatibility">
-                  <p id="result-compatibility-reason">✓ Compatibilité élevée basée sur votre temps de présence.</p>
-                </div>
-
-                <div class="result-buttons">
-                  <a href="#download" class="btn btn-primary">Adopter sur l'Application</a>
-                  <button class="btn btn-secondary" id="quiz-restart">Recommencer le test</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Showcase gallery of pets -->
-    <section class="showcase-section reveal" id="showcase">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag section-tag-secondary">🐶 Ils n'attendent que vous</span>
-          <h2 class="section-title">Quelques profils actuellement en refuge</h2>
-          <p class="section-desc">Voici un aperçu des chiens et chats impatients de trouver une famille aimante.
-            Téléchargez l'application pour filtrer selon vos critères précis.</p>
-        </div>
-
-        <div class="showcase-grid">
-          <!-- Pet 1 -->
-          <article class="pet-card">
-            <div class="pet-img-container">
-              <img src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?auto=format&fit=crop&q=80&w=400"
-                alt="Bella, jeune chienne de race Border Collie, énergique et attentive">
-              <span class="pet-match-badge-grid">Match à 96%</span>
-            </div>
-            <div class="pet-card-details">
-              <div class="pet-name-gender">
-                <h3>Bella</h3>
-                <span class="pet-gender-icon" aria-label="Femelle">♀</span>
-              </div>
-              <div class="pet-info">Border Collie • 1 an • 📍 SPA Rennes</div>
-              <div class="pet-tags">
-                <span class="card-tag">Hyper active</span>
-                <span class="card-tag">Brillante</span>
-              </div>
-              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
-            </div>
-          </article>
-
-          <!-- Pet 2 -->
-          <article class="pet-card">
-            <div class="pet-img-container">
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=400"
-                alt="Rocky, adorable chiot marron et blanc jouant dans l'herbe">
-              <span class="pet-match-badge-grid">Match à 92%</span>
-            </div>
-            <div class="pet-card-details">
-              <div class="pet-name-gender">
-                <h3>Rocky</h3>
-                <span class="pet-gender-icon" aria-label="Mâle">♂</span>
-              </div>
-              <div class="pet-info">Épagneul Breton • 6 mois • 📍 SPA Lyon</div>
-              <div class="pet-tags">
-                <span class="card-tag">Joueur</span>
-                <span class="card-tag">Très câlin</span>
-              </div>
-              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
-            </div>
-          </article>
-
-          <!-- Pet 3 -->
-          <article class="pet-card">
-            <div class="pet-img-container">
-              <img src="https://images.unsplash.com/photo-1513360309081-36f5e878fc9e?auto=format&fit=crop&q=80&w=400"
-                alt="Cléo, chatte siamoise aux yeux bleus azur et oreilles sombres">
-              <span class="pet-match-badge-grid">Match à 95%</span>
-            </div>
-            <div class="pet-card-details">
-              <div class="pet-name-gender">
-                <h3>Cléo</h3>
-                <span class="pet-gender-icon" aria-label="Femelle">♀</span>
-              </div>
-              <div class="pet-info">Siamois • 3 ans • 📍 SPA Paris</div>
-              <div class="pet-tags">
-                <span class="card-tag">Calme</span>
-                <span class="card-tag">Affectueuse</span>
-              </div>
-              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
-            </div>
-          </article>
-
-          <!-- Pet 4 -->
-          <article class="pet-card">
-            <div class="pet-img-container">
-              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400"
-                alt="Tobby, chien de type Golden Retriever couleur sable couché sur le sol">
-              <span class="pet-match-badge-grid">Match à 98%</span>
-            </div>
-            <div class="pet-card-details">
-              <div class="pet-name-gender">
-                <h3>Tobby</h3>
-                <span class="pet-gender-icon" aria-label="Mâle">♂</span>
-              </div>
-              <div class="pet-info">Golden Retriever • 2 ans • 📍 SPA Lille</div>
-              <div class="pet-tags">
-                <span class="card-tag">Protecteur</span>
-                <span class="card-tag">Sociable</span>
-              </div>
-              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
-            </div>
           </article>
         </div>
       </div>
@@ -585,7 +434,7 @@
     <section class="testimonials reveal" id="testimonials">
       <div class="container">
         <div class="text-center">
-          <span class="section-tag">❤️ Histoires d'adoption</span>
+          <span class="section-tag">❤️ Témoignages d'adoption</span>
           <h2 class="section-title">Ils ont trouvé leur match parfait</h2>
           <p class="section-desc">Découvrez les retours d'expérience d'adoptants qui partagent désormais leur vie avec
             un animal qui leur correspond à 100%.</p>
@@ -649,57 +498,6 @@
       </div>
     </section>
 
-    <!-- Statistics Section & Endless Brand loop -->
-    <section class="stats-section reveal" id="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <h3>50k+</h3>
-            <p>Animaux adoptés</p>
-          </div>
-          <div class="stat-item">
-            <h3>150+</h3>
-            <p>Refuges partenaires</p>
-          </div>
-          <div class="stat-item">
-            <h3>98%</h3>
-            <p>Adoptions réussies</p>
-          </div>
-          <div class="stat-item">
-            <h3>0€</h3>
-            <p>Application 100% gratuite</p>
-          </div>
-        </div>
-
-        <div class="shelter-carousel">
-          <div class="shelter-carousel-title">Nos Refuges Partenaires Certifiés</div>
-          <div class="logo-slider">
-            <div class="logo-track" aria-hidden="true">
-              <!-- Item 1 -->
-              <span class="logo-item">🐾 SPA de France</span>
-              <!-- Item 2 -->
-              <span class="logo-item">🐱 Fondation 30 Millions d'Amis</span>
-              <!-- Item 3 -->
-              <span class="logo-item">🐶 Refuge de l'Espoir</span>
-              <!-- Item 4 -->
-              <span class="logo-item">🐾 Fondation Brigitte Bardot</span>
-              <!-- Item 5 -->
-              <span class="logo-item">🐱 Association Féline</span>
-              <!-- Item 6 -->
-              <span class="logo-item">🐶 Ligue de Protection Animale</span>
-              <!-- Duplicate for infinite scroll -->
-              <span class="logo-item">🐾 SPA de France</span>
-              <span class="logo-item">🐱 Fondation 30 Millions d'Amis</span>
-              <span class="logo-item">🐶 Refuge de l'Espoir</span>
-              <span class="logo-item">🐾 Fondation Brigitte Bardot</span>
-              <span class="logo-item">🐱 Association Féline</span>
-              <span class="logo-item">🐶 Ligue de Protection Animale</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Call to Action Section (Download App) -->
     <section class="cta-section reveal" id="download">
       <div class="container cta-container">
@@ -753,11 +551,8 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo" aria-label="Matchever - Retour à l'accueil">
-          <svg class="logo-heart" width="24" height="24" viewBox="0 0 160 160" fill="currentColor">
-            <path
-              d="M151.418 137.667L119.723 137.744C117.818 137.747 116.35 136.688 115.79 134.912L103.461 92.102C103.144 91.1023 86.847 104.865 80.2548 104.82C72.2499 104.766 56.8578 90.6018 56.8578 90.6018C57.6647 91.4264 50.9873 114.034 50.6181 115.18L44.1466 135.125C43.7065 136.486 42.4607 137.683 40.912 137.686L9.2475 137.747C8.02536 137.751 7.06232 137.449 6.38204 136.676C5.68046 135.883 5.26164 134.639 5.65206 133.421L15.2174 103.599L26.7183 67.574C25.2324 60.0151 24.5119 52.4575 24.881 44.7543C25.075 40.6857 25.5553 36.6548 26.4072 32.669C26.6355 31.6077 26.936 30.6127 27.2294 29.5764C27.7583 27.6775 28.6823 25.1906 29.9127 23.6147C30.6888 22.6268 32.2517 22.1926 33.5129 22.3311C35.0213 22.4967 36.2825 22.9593 37.6088 23.6573C42.7848 26.3867 47.3611 29.9384 51.3623 34.0745C55.7232 38.5857 59.2867 43.6328 62.2326 49.0715C73.6897 45.9232 85.9573 45.9504 97.4428 48.991C101.114 43.0365 105.361 37.496 110.482 32.5755C112.63 30.5228 114.879 28.5967 117.305 26.8458C118.496 25.9868 119.709 25.2178 120.976 24.4725C122.465 23.5982 124.585 22.5831 126.254 22.2542H127.159C128.47 22.4576 129.704 23.0303 130.449 24.1282C131.757 26.0614 132.702 28.6547 133.295 30.8801C133.68 32.3235 134.016 33.7326 134.289 35.2103C134.895 38.4756 135.21 41.7587 135.311 45.0773C135.542 52.4599 134.671 59.8152 133.249 67.0569L138.798 84.4178L154.33 133.138C154.997 135.233 153.634 137.664 151.418 137.668V137.667Z" />
-          </svg>
+        <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+          <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="24" height="24">
           <span>Matchever</span>
         </a>
         <p>L'application solidaire qui réinvente l'adoption animale en alliant science comportementale et éthique.</p>
@@ -793,8 +588,8 @@
         <h4>Application</h4>
         <ul class="footer-links">
           <li><a href="#concept">Comment ça marche</a></li>
-          <li><a href="#quiz">Le Quiz en ligne</a></li>
-          <li><a href="#showcase">Découvrir les profils</a></li>
+          <li><a href="#probleme">Le problème</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
           <li><a href="#download">Télécharger l'app</a></li>
         </ul>
       </div>
@@ -802,20 +597,20 @@
       <div class="footer-col">
         <h4>Partenariats</h4>
         <ul class="footer-links">
-          <li><a href="#">Rejoindre comme refuge</a></li>
-          <li><a href="#">Recommandations Vétérinaires</a></li>
-          <li><a href="#">Charte Éthique d'Adoption</a></li>
-          <li><a href="#">Soutenir l'association</a></li>
+          <li><a href="refuge.html">Rejoindre comme refuge</a></li>
+          <li><a href="eleveur.html">Espace éleveurs</a></li>
+          <li><a href="about.html">Notre mission</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Contact & Aide</h4>
+        <h4>Informations</h4>
         <ul class="footer-links">
-          <li><a href="#">Centre d'Assistance</a></li>
-          <li><a href="#">Presse & Médias</a></li>
-          <li><a href="#">Contactez-nous</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Politique de confidentialité</a></li>
+          <li><a href="terms.html">Conditions d'utilisation</a></li>
+          <li><a href="cookies.html">Politique des cookies</a></li>
         </ul>
       </div>
     </div>
@@ -823,9 +618,9 @@
     <div class="container footer-bottom">
       <p>&copy; 2026 Matchever. Tous droits réservés. Développé avec amour pour nos fidèles compagnons.</p>
       <div class="footer-legal-links">
-        <a href="#">Accessibilité : partiellement conforme</a>
-        <a href="#">Politique de Confidentialité</a>
-        <a href="#">Conditions Générales</a>
+        <a href="privacy.html">Politique de Confidentialité</a>
+        <a href="terms.html">Conditions Générales</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </footer>

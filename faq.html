@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ – Questions fréquentes | Matchever</title>
+  <meta name="description" content="Trouvez les réponses à toutes vos questions sur Matchever : adoption, processus d'inscription, paiements, sécurité et plus encore.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="sr-only" tabindex="0">Aller directement au contenu principal</a>
+
+  <header class="header" id="header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+        <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="28" height="28">
+        <span>Matchever</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="refuge.html" class="nav-link">Refuges</a>
+        <a href="eleveur.html" class="nav-link">Éleveurs</a>
+        <a href="faq.html" class="nav-link nav-link-active">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-cta">
+          <a href="index.html#download" class="btn btn-primary">Télécharger l'app</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-faq" id="page-top">
+      <div class="container page-hero-content">
+        <span class="section-tag">❓ FAQ</span>
+        <h1>Toutes vos questions, <span class="text-gradient">toutes nos réponses.</span></h1>
+        <p>Nous avons regroupé les réponses aux questions les plus fréquemment posées. Vous ne trouvez pas votre réponse ? <a href="contact.html" style="color: var(--primary); text-decoration: underline;">Contactez-nous.</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ Sections -->
+    <section class="faq-section" id="faq-content">
+      <div class="container faq-container">
+
+        <!-- Sidebar Navigation -->
+        <nav class="faq-nav" aria-label="Navigation FAQ">
+          <a href="#generales" class="faq-nav-link">Questions générales</a>
+          <a href="#adoption" class="faq-nav-link">Processus d'adoption</a>
+          <a href="#paiements" class="faq-nav-link">Paiements</a>
+          <a href="#securite" class="faq-nav-link">Sécurité &amp; vérification</a>
+        </nav>
+
+        <!-- FAQ Content -->
+        <div class="faq-content">
+
+          <!-- Questions Générales -->
+          <div class="faq-group" id="generales">
+            <h2 class="faq-group-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Questions générales
+            </h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary class="faq-question">Qu'est-ce que Matchever ?</summary>
+                <div class="faq-answer">
+                  <p>Matchever est une application mobile gratuite qui connecte des futurs adoptants avec des chiens et des chats en refuge, en utilisant un algorithme de compatibilité basé sur les personnalités et modes de vie. Notre objectif est de réduire les retours en refuge en créant des paires adoptant-animal parfaites.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">L'application est-elle vraiment gratuite ?</summary>
+                <div class="faq-answer">
+                  <p>Oui ! Matchever est 100% gratuit pour les adoptants particuliers et pour les refuges. Les seules fonctionnalités payantes concernent les éleveurs professionnels (offre Premium à partir de 29€/mois).</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Sur quels appareils est disponible l'application ?</summary>
+                <div class="faq-answer">
+                  <p>Matchever est disponible sur iOS (App Store) et Android (Google Play). Vous pouvez également accéder à certaines fonctionnalités via notre site web.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Dans quelles villes Matchever est-il disponible ?</summary>
+                <div class="faq-answer">
+                  <p>Matchever est actuellement disponible dans toute la France métropolitaine. Nous travaillons à notre expansion dans les DOM-TOM et en Belgique.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Processus d'adoption -->
+          <div class="faq-group" id="adoption">
+            <h2 class="faq-group-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              Processus d'adoption
+            </h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary class="faq-question">Comment fonctionne le matching ?</summary>
+                <div class="faq-answer">
+                  <p>Notre algorithme analyse plus de 40 critères : votre mode de vie, niveau d'activité, type de logement, expérience avec les animaux, présence d'enfants ou d'autres animaux, temps disponible, etc. Ces données sont croisées avec les profils comportementaux des animaux des refuges pour calculer un score de compatibilité.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">L'adoption se fait-elle directement sur l'application ?</summary>
+                <div class="faq-answer">
+                  <p>Non. Matchever est un outil de mise en relation. L'adoption elle-même se fait en direct avec le refuge partenaire, qui organise une visite, effectue les vérifications d'usage et finalise les documents officiels d'adoption.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Puis-je adopter un animal d'une autre région ?</summary>
+                <div class="faq-answer">
+                  <p>Oui ! Vous pouvez configurer votre rayon de recherche dans les paramètres. Certains refuges proposent même des solutions de transport pour les adoptions à distance.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Que se passe-t-il après l'adoption ?</summary>
+                <div class="faq-answer">
+                  <p>Matchever propose un suivi post-adoption avec des ressources, des conseils personnalisés selon votre animal, et la possibilité de laisser un avis. Notre équipe reste disponible pour vous accompagner dans les premiers mois.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paiements -->
+          <div class="faq-group" id="paiements">
+            <h2 class="faq-group-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              Paiements
+            </h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary class="faq-question">Matchever prend-il une commission sur les adoptions ?</summary>
+                <div class="faq-answer">
+                  <p>Absolument pas. Matchever ne prend aucune commission sur les adoptions. Les frais d'adoption (vaccination, identification, stérilisation) sont fixés directement par les refuges et restent entre vous et eux.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Comment Matchever gagne-t-il de l'argent ?</summary>
+                <div class="faq-answer">
+                  <p>Notre modèle économique repose uniquement sur les abonnements Premium des éleveurs professionnels. Cela nous permet de maintenir la plateforme 100% gratuite pour les adoptants et les refuges.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Quels sont les modes de paiement acceptés pour les éleveurs ?</summary>
+                <div class="faq-answer">
+                  <p>Pour les abonnements éleveurs, nous acceptons les cartes bancaires (Visa, Mastercard, American Express), les virements SEPA et PayPal. Toutes les transactions sont sécurisées par Stripe.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Sécurité & Vérification -->
+          <div class="faq-group" id="securite">
+            <h2 class="faq-group-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Sécurité &amp; vérification
+            </h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary class="faq-question">Comment sont vérifiés les refuges partenaires ?</summary>
+                <div class="faq-answer">
+                  <p>Chaque refuge doit fournir son numéro SIRET, ses agréments préfectoraux et ses attestations de la Direction Départementale de Protection des Populations (DDPP). Notre équipe vérifie chaque dossier sous 48h avant activation.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Mes données personnelles sont-elles protégées ?</summary>
+                <div class="faq-answer">
+                  <p>Oui. Matchever est entièrement conforme au RGPD. Vos données ne sont jamais revendues à des tiers. Elles sont uniquement utilisées pour améliorer votre expérience de matching. Vous pouvez demander la suppression de vos données à tout moment.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Comment signaler un profil suspect ?</summary>
+                <div class="faq-answer">
+                  <p>Chaque profil dispose d'un bouton "Signaler" accessible depuis la fiche de l'animal ou du refuge. Notre équipe de modération traite chaque signalement sous 24h.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Puis-je utiliser Matchever anonymement ?</summary>
+                <div class="faq-answer">
+                  <p>Vous pouvez parcourir les profils sans vous connecter. Cependant, pour contacter un refuge ou un éleveur, la création d'un compte vérifié est obligatoire pour garantir la sécurité de toutes les parties.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="cta-section reveal" style="padding: 60px 0;">
+      <div class="container text-center">
+        <h2>Vous n'avez pas trouvé votre réponse ?</h2>
+        <p class="section-desc" style="margin: 16px auto 32px;">Notre équipe de support est disponible du lundi au vendredi pour répondre à toutes vos questions.</p>
+        <a href="contact.html" class="btn btn-primary">Contacter le support</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
+          <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="24" height="24">
+          <span>Matchever</span>
+        </a>
+        <p>L'application solidaire qui réinvente l'adoption animale.</p>
+      </div>
+      <div class="footer-col">
+        <h4>FAQ</h4>
+        <ul class="footer-links">
+          <li><a href="#generales">Questions générales</a></li>
+          <li><a href="#adoption">Processus d'adoption</a></li>
+          <li><a href="#paiements">Paiements</a></li>
+          <li><a href="#securite">Sécurité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Matchever</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="terms.html">CGU</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Matchever. Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html">CGU</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // FAQ accordion smooth toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.faq-item[open]').forEach(other => {
+            if (other !== item) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+    // FAQ nav active state on scroll
+    const faqGroups = document.querySelectorAll('.faq-group');
+    const faqNavLinks = document.querySelectorAll('.faq-nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          faqNavLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.faq-nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    faqGroups.forEach(g => observer.observe(g));
+  </script>
+</body>
+</html>
