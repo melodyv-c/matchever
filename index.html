@@ -1,11 +1,760 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matchever</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Matchever | L'adoption responsable d'animaux par affinité de personnalité</title>
+  <meta name="description" content="Découvrez Matchever, l'application mobile gratuite qui connecte les futurs adoptants avec les chiens et chats de refuges selon leurs personnalités. Faites le test, matchez, adoptez !">
+  <meta name="keywords" content="adoption chien, adoption chat, refuge animaux, SPA, test personnalité animaux, match animaux, matchever, adopter un animal">
+  <meta name="author" content="Matchever Team">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://matchever.fr/">
+  <meta property="og:title" content="Matchever | L'adoption d'animaux par affinité de personnalité">
+  <meta property="og:description" content="Trouvez votre compagnon idéal en refuge grâce à notre test de personnalité interactif. Téléchargez gratuitement l'application.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Matchever | L'adoption d'animaux par affinité">
+  <meta property="twitter:description" content="Trouvez votre compagnon idéal en refuge grâce à notre test de personnalité interactif.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Favicon (Fallback Emoji representation) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="color: red;">Matchever</h1>
+
+  <!-- Accessibilité : Lien d'évitement -->
+  <a href="#main-content" class="sr-only" tabindex="0">Aller directement au contenu principal</a>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header" role="banner">
+    <div class="container header-container">
+      <a href="#" class="logo" aria-label="Matchever - Retour à l'accueil">
+        <svg class="logo-heart" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span>Matchever</span>
+      </a>
+
+      <!-- Menu Toggle pour mobile -->
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation sémantique -->
+      <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+        <a href="#concept" class="nav-link">Concept</a>
+        <a href="#quiz" class="nav-link">Le Quiz</a>
+        <a href="#showcase" class="nav-link">Nos Animaux</a>
+        <a href="#testimonials" class="nav-link">Témoignages</a>
+        <div class="nav-cta">
+          <a href="#download" class="btn btn-primary" id="header-cta-btn">Télécharger l'app</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">🐾 L'Adoption Responsable</span>
+          <h1>Trouvez le compagnon de vie qui vous <span class="text-gradient">ressemble</span> vraiment.</h1>
+          <p>Fini les adoptions sur un coup de tête. Matchever évalue vos modes de vie et personnalités pour vous proposer les chiens et chats en refuge qui s'adapteront parfaitement à votre quotidien.</p>
+          
+          <div class="hero-badges-wrapper">
+            <div class="app-badges" id="hero-download-buttons">
+              <!-- App Store Badge -->
+              <a href="https://www.apple.com/app-store/" class="app-badge-btn" target="_blank" rel="noopener noreferrer" aria-label="Télécharger Matchever sur l'App Store - Ouvre une nouvelle fenêtre">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.71,19.5C17.88,20.74,17,21.95,15.66,21.97c-1.34,0-1.77-.81-3.3-.81s-2,.79-3.3.84C7.74,22,6.76,20.69,5.92,19.5,4.21,17,2.91,12.39,4.67,9.35c.87-1.51,2.43-2.47,4.12-2.5,1.28,0,2.49.89,3.28.89s2.2-.1,3.75.16a5.59,5.59,0,0,1,4.38,2.44,5.43,5.43,0,0,0-2.61,4.55,5.54,5.54,0,0,0,3.37,5.06A13.72,13.72,0,0,1,18.71,19.5M15.91,4.89a5.16,5.16,0,0,0,1.2-3.64,5.29,5.29,0,0,0-3.46,1.77,5.09,5.09,0,0,0-1.25,3.52A4.61,4.61,0,0,0,15.91,4.89Z"/>
+                </svg>
+                <div class="app-badge-text">
+                  <span class="app-badge-small">Disponible sur l'</span>
+                  <span class="app-badge-large">App Store</span>
+                </div>
+              </a>
+              <!-- Google Play Badge -->
+              <a href="https://play.google.com/store" class="app-badge-btn" target="_blank" rel="noopener noreferrer" aria-label="Télécharger Matchever sur Google Play - Ouvre une nouvelle fenêtre">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3,5.27V18.73L16.55,12L3,5.27M17.87,11.33L19.46,12.12L17.87,12.92L17.87,11.33M3.55,4.1L16.82,10.74L19.86,5.71L3.55,4.1M3.55,19.9L19.86,18.29L16.82,13.26L3.55,19.9Z"/>
+                </svg>
+                <div class="app-badge-text">
+                  <span class="app-badge-small">Disponible sur</span>
+                  <span class="app-badge-large">Google Play</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="hero-badges-info">
+              <span class="hero-rating" aria-label="Note de 4.9 sur 5 étoiles">
+                ★★★★★
+              </span>
+              <span>Plus de 50 000 adoptions réussies • Gratuit & solidaire</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interactive Card Swipe Mockup -->
+        <div class="hero-mockup-wrapper">
+          <!-- Floating notification 1 -->
+          <div class="floating-element float-1" aria-hidden="true">
+            <div class="float-icon">🐾</div>
+            <div class="float-text">
+              <p>Match à 98% !</p>
+              <h4>Tobby & Thomas</h4>
+            </div>
+          </div>
+
+          <!-- Floating notification 2 -->
+          <div class="floating-element float-2" aria-hidden="true">
+            <div class="float-icon">❤️</div>
+            <div class="float-text">
+              <p>Adoption validée !</p>
+              <h4>Luna a trouvé son foyer</h4>
+            </div>
+          </div>
+
+          <!-- Phone Frame Container -->
+          <div class="phone-frame" role="img" aria-label="Simulation interactive de l'application Matchever">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="screen-header">
+                <div class="screen-logo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span>Matchever</span>
+                </div>
+                <div class="screen-profile-btn" aria-hidden="true"></div>
+              </div>
+              
+              <!-- Cards Deck for Drag & Swipe -->
+              <div class="card-deck" id="card-deck">
+                
+                <!-- Card 3 (Bottom) -->
+                <div class="swipe-card" data-id="3">
+                  <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&q=80&w=400" alt="Oliver, chat de type roux tigré, posant fièrement">
+                    <span class="card-match-badge">⚡ Match 94%</span>
+                    <span class="card-stamp like">Adopter</span>
+                    <span class="card-stamp nope">Passe</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-name-age">Oliver, 1 an</h3>
+                    <div class="card-info-row">
+                      <span class="card-tag">Calme</span>
+                      <span class="card-tag">Câlin</span>
+                      <span class="card-tag pet-match">Ok appart</span>
+                    </div>
+                    <div class="card-loc">📍 Refuge Orléans (45)</div>
+                  </div>
+                </div>
+
+                <!-- Card 2 (Middle) -->
+                <div class="swipe-card" data-id="2">
+                  <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=400" alt="Luna, petite chatte noire aux grands yeux verts curieux">
+                    <span class="card-match-badge">⚡ Match 97%</span>
+                    <span class="card-stamp like">Adopter</span>
+                    <span class="card-stamp nope">Passe</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-name-age">Luna, 4 mois</h3>
+                    <div class="card-info-row">
+                      <span class="card-tag">Joueuse</span>
+                      <span class="card-tag">Curieuse</span>
+                      <span class="card-tag pet-match">Ok enfants</span>
+                    </div>
+                    <div class="card-loc">📍 Refuge SPA Plaisir (78)</div>
+                  </div>
+                </div>
+
+                <!-- Card 1 (Top) -->
+                <div class="swipe-card" data-id="1">
+                  <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400" alt="Max, Golden Retriever assis sagement avec un regard doux">
+                    <span class="card-match-badge">⚡ Match 98%</span>
+                    <span class="card-stamp like">Adopter</span>
+                    <span class="card-stamp nope">Passe</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-name-age">Max, 2 ans</h3>
+                    <div class="card-info-row">
+                      <span class="card-tag">Sociable</span>
+                      <span class="card-tag">Sportif</span>
+                      <span class="card-tag pet-match">Ok chats</span>
+                    </div>
+                    <div class="card-loc">📍 Refuge SPA de Gennevilliers (92)</div>
+                  </div>
+                </div>
+
+              </div>
+              
+              <!-- Screen Swipe Action Buttons -->
+              <div class="swipe-actions">
+                <button class="btn-swipe nope" id="swipe-nope" aria-label="Passer ce profil d'animal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                <button class="btn-swipe info" id="swipe-info" aria-label="Voir la fiche détaillée de cet animal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                </button>
+                <button class="btn-swipe like" id="swipe-like" aria-label="Adopter / Liker ce profil d'animal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="concept reveal" id="concept">
+      <div class="container text-center">
+        <span class="section-tag section-tag-secondary">🔍 Le Concept</span>
+        <h2 class="section-title">Une adoption réfléchie pour un bonheur partagé.</h2>
+        <p class="section-desc">L'adoption est un engagement de longue durée. Matchever vous aide à choisir le bon compagnon en analysant vos besoins réciproques afin de réduire drastiquement les retours en refuge.</p>
+        
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <article class="step-card">
+            <span class="step-num" aria-hidden="true">01</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Créez votre profil</h3>
+            <p>Renseignez votre mode de vie, votre temps disponible, votre type de logement et vos attentes concernant votre futur compagnon.</p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step-card">
+            <span class="step-num" aria-hidden="true">02</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>Découvrez vos Matchs</h3>
+            <p>Notre algorithme de matching analyse les profils des animaux des refuges locaux pour faire ressortir ceux qui partagent vos rythmes de vie.</p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step-card">
+            <span class="step-num" aria-hidden="true">03</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3>Rencontrez & Adoptez</h3>
+            <p>Une fois le match trouvé, entrez directement en contact avec le refuge partenaire pour organiser une visite et finaliser une adoption éthique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini-Quiz Section -->
+    <section class="quiz-section reveal" id="quiz">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">⚡ Faites l'essai</span>
+          <h2 class="section-title">Quel compagnon est fait pour vous ?</h2>
+          <p class="section-desc">Testez notre algorithme en 3 questions rapides et découvrez instantanément votre premier match de refuge.</p>
+        </div>
+
+        <div class="quiz-container" id="quiz-widget">
+          <!-- Progress bar -->
+          <div class="quiz-progress" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" aria-label="Progression du questionnaire">
+            <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="quiz-step active" data-step="1">
+            <h3 class="quiz-question-title" id="q1-title">1. Quel est votre niveau d'activité quotidien ?</h3>
+            <div class="quiz-options" role="radiogroup" aria-labelledby="q1-title">
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="sportif">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Très actif / Sportif</div>
+                  <div class="option-desc">J'aime la course à pied, les longues randonnées et passer du temps dehors.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="modere">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Modéré / Balades tranquilles</div>
+                  <div class="option-desc">Une promenade quotidienne me convient parfaitement, avec quelques jeux à la maison.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="calme">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Plutôt casanier / Calme</div>
+                  <div class="option-desc">Je préfère lire un livre, regarder des films ou travailler sereinement à la maison.</div>
+                </div>
+              </button>
+            </div>
+            <div class="quiz-footer-nav">
+              <span></span>
+              <button class="btn btn-primary" id="quiz-next-1" disabled>Continuer</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="quiz-step" data-step="2">
+            <h3 class="quiz-question-title" id="q2-title">2. De quel espace de vie disposez-vous ?</h3>
+            <div class="quiz-options" role="radiogroup" aria-labelledby="q2-title">
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="jardin">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Maison avec grand jardin clos</div>
+                  <div class="option-desc">Un grand espace extérieur sécurisé pour courir et s'amuser.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="balcon">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Appartement avec balcon ou terrasse</div>
+                  <div class="option-desc">Un logement cosy avec un espace de sortie sécurisé à l'air libre.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="interieur">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Appartement intérieur uniquement</div>
+                  <div class="option-desc">Un espace intérieur chaleureux mais sans accès extérieur direct.</div>
+                </div>
+              </button>
+            </div>
+            <div class="quiz-footer-nav">
+              <button class="btn btn-secondary" id="quiz-prev-2">Retour</button>
+              <button class="btn btn-primary" id="quiz-next-2" disabled>Continuer</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="quiz-step" data-step="3">
+            <h3 class="quiz-question-title" id="q3-title">3. Combien d'heures pouvez-vous accorder à l'animal ?</h3>
+            <div class="quiz-options" role="radiogroup" aria-labelledby="q3-title">
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="beaucoup">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Plus de 4 heures par jour</div>
+                  <div class="option-desc">Je travaille à domicile ou je suis disponible la majeure partie du temps.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="moyen">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Entre 1 et 3 heures par jour</div>
+                  <div class="option-desc">Je m'absente pour le travail mais je réserve mes soirées et matins pour lui.</div>
+                </div>
+              </button>
+              <button class="quiz-option" role="radio" aria-checked="false" data-value="peu">
+                <span class="option-dot"></span>
+                <div class="option-content">
+                  <div class="option-title">Moins d'une heure par jour</div>
+                  <div class="option-desc">Mon emploi du temps est très chargé mais je recherche une présence apaisante.</div>
+                </div>
+              </button>
+            </div>
+            <div class="quiz-footer-nav">
+              <button class="btn btn-secondary" id="quiz-prev-3">Retour</button>
+              <button class="btn btn-primary" id="quiz-submit" disabled>Calculer mon Match</button>
+            </div>
+          </div>
+
+          <!-- Loading Screen State -->
+          <div class="quiz-loading" id="quiz-loading">
+            <div class="spinner" aria-hidden="true"></div>
+            <h3 class="quiz-question-title">Analyse de vos habitudes...</h3>
+            <p>Notre algorithme recherche le profil le plus compatible parmi les 4 500 chiens et chats de nos refuges partenaires.</p>
+          </div>
+
+          <!-- Quiz Result Screen -->
+          <div class="quiz-result" id="quiz-result">
+            <div class="quiz-result-grid">
+              <div class="result-card-preview">
+                <div class="result-img">
+                  <img id="result-pet-img" src="" alt="Photo de votre animal compatible">
+                  <span class="result-percentage" id="result-pet-pct">98% Match</span>
+                </div>
+                <div class="result-card-details">
+                  <div class="result-name" id="result-pet-name">Max</div>
+                  <div class="result-meta" id="result-pet-meta">Golden Retriever • Mâle • 2 ans</div>
+                  <div class="result-tags" id="result-pet-tags">
+                    <span class="result-tag primary">Sportif</span>
+                    <span class="result-tag">Sociable</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-info">
+                <h3>Votre match idéal est trouvé !</h3>
+                <p id="result-pet-desc">En fonction de votre niveau d'activité soutenu et de votre grand jardin clos, nous vous conseillons un profil énergique qui s'épanouira avec vous au quotidien.</p>
+                
+                <div class="result-compatibility">
+                  <p id="result-compatibility-reason">✓ Compatibilité élevée basée sur votre temps de présence.</p>
+                </div>
+
+                <div class="result-buttons">
+                  <a href="#download" class="btn btn-primary">Adopter sur l'Application</a>
+                  <button class="btn btn-secondary" id="quiz-restart">Recommencer le test</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase gallery of pets -->
+    <section class="showcase-section reveal" id="showcase">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag section-tag-secondary">🐶 Ils n'attendent que vous</span>
+          <h2 class="section-title">Quelques profils actuellement en refuge</h2>
+          <p class="section-desc">Voici un aperçu des chiens et chats impatients de trouver une famille aimante. Téléchargez l'application pour filtrer selon vos critères précis.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Pet 1 -->
+          <article class="pet-card">
+            <div class="pet-img-container">
+              <img src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?auto=format&fit=crop&q=80&w=400" alt="Bella, jeune chienne de race Border Collie, énergique et attentive">
+              <span class="pet-match-badge-grid">Match à 96%</span>
+            </div>
+            <div class="pet-card-details">
+              <div class="pet-name-gender">
+                <h3>Bella</h3>
+                <span class="pet-gender-icon" aria-label="Femelle">♀</span>
+              </div>
+              <div class="pet-info">Border Collie • 1 an • 📍 SPA Rennes</div>
+              <div class="pet-tags">
+                <span class="card-tag">Hyper active</span>
+                <span class="card-tag">Brillante</span>
+              </div>
+              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
+            </div>
+          </article>
+
+          <!-- Pet 2 -->
+          <article class="pet-card">
+            <div class="pet-img-container">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=400" alt="Rocky, adorable chiot marron et blanc jouant dans l'herbe">
+              <span class="pet-match-badge-grid">Match à 92%</span>
+            </div>
+            <div class="pet-card-details">
+              <div class="pet-name-gender">
+                <h3>Rocky</h3>
+                <span class="pet-gender-icon" aria-label="Mâle">♂</span>
+              </div>
+              <div class="pet-info">Épagneul Breton • 6 mois • 📍 SPA Lyon</div>
+              <div class="pet-tags">
+                <span class="card-tag">Joueur</span>
+                <span class="card-tag">Très câlin</span>
+              </div>
+              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
+            </div>
+          </article>
+
+          <!-- Pet 3 -->
+          <article class="pet-card">
+            <div class="pet-img-container">
+              <img src="https://images.unsplash.com/photo-1513360309081-36f5e878fc9e?auto=format&fit=crop&q=80&w=400" alt="Cléo, chatte siamoise aux yeux bleus azur et oreilles sombres">
+              <span class="pet-match-badge-grid">Match à 95%</span>
+            </div>
+            <div class="pet-card-details">
+              <div class="pet-name-gender">
+                <h3>Cléo</h3>
+                <span class="pet-gender-icon" aria-label="Femelle">♀</span>
+              </div>
+              <div class="pet-info">Siamois • 3 ans • 📍 SPA Paris</div>
+              <div class="pet-tags">
+                <span class="card-tag">Calme</span>
+                <span class="card-tag">Affectueuse</span>
+              </div>
+              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
+            </div>
+          </article>
+
+          <!-- Pet 4 -->
+          <article class="pet-card">
+            <div class="pet-img-container">
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400" alt="Tobby, chien de type Golden Retriever couleur sable couché sur le sol">
+              <span class="pet-match-badge-grid">Match à 98%</span>
+            </div>
+            <div class="pet-card-details">
+              <div class="pet-name-gender">
+                <h3>Tobby</h3>
+                <span class="pet-gender-icon" aria-label="Mâle">♂</span>
+              </div>
+              <div class="pet-info">Golden Retriever • 2 ans • 📍 SPA Lille</div>
+              <div class="pet-tags">
+                <span class="card-tag">Protecteur</span>
+                <span class="card-tag">Sociable</span>
+              </div>
+              <a href="#download" class="pet-card-cta">Découvrir son profil</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials reveal" id="testimonials">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">❤️ Histoires d'adoption</span>
+          <h2 class="section-title">Ils ont trouvé leur match parfait</h2>
+          <p class="section-desc">Découvrez les retours d'expérience d'adoptants qui partagent désormais leur vie avec un animal qui leur correspond à 100%.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="Note de 5 sur 5">★★★★★</div>
+            <p class="testimonial-quote">"Je cherchais un chat calme pour m'accompagner pendant mon télétravail. L'application m'a tout de suite mis en relation avec Cléo, qui adore s'endormir sur mes genoux pendant mes réunions. Une adéquation parfaite !"</p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Portrait de Sarah, adoptante heureuse de Cléo">
+              </div>
+              <div class="author-info">
+                <h4>Sarah D.</h4>
+                <p>Adoptante de Cléo (Siamois)</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="Note de 5 sur 5">★★★★★</div>
+            <p class="testimonial-quote">"Sportif passionné, je craignais de prendre un chien qui ne puisse pas me suivre en rando. Matchever m'a suggéré Rocky. Depuis 6 mois, il court à mes côtés et a une énergie incroyable. C'est le meilleur choix de ma vie !"</p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Portrait de Thomas, adoptant souriant de Rocky">
+              </div>
+              <div class="author-info">
+                <h4>Thomas B.</h4>
+                <p>Adoptant de Rocky (Épagneul)</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="Note de 5 sur 5">★★★★★</div>
+            <p class="testimonial-quote">"Mon appartement n'est pas très grand, je voulais donc éviter les races trop énergiques. Grâce au test de personnalité, j'ai matché avec Oliver, un chat paisible et très propre. Merci Matchever !"</p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150" alt="Portrait de Léa, adoptante d'Oliver">
+              </div>
+              <div class="author-info">
+                <h4>Léa M.</h4>
+                <p>Adoptante d'Oliver (Chat roux)</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section & Endless Brand loop -->
+    <section class="stats-section reveal" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>50k+</h3>
+            <p>Animaux adoptés</p>
+          </div>
+          <div class="stat-item">
+            <h3>150+</h3>
+            <p>Refuges partenaires</p>
+          </div>
+          <div class="stat-item">
+            <h3>98%</h3>
+            <p>Adoptions réussies</p>
+          </div>
+          <div class="stat-item">
+            <h3>0€</h3>
+            <p>Application 100% gratuite</p>
+          </div>
+        </div>
+
+        <div class="shelter-carousel">
+          <div class="shelter-carousel-title">Nos Refuges Partenaires Certifiés</div>
+          <div class="logo-slider">
+            <div class="logo-track" aria-hidden="true">
+              <!-- Item 1 -->
+              <span class="logo-item">🐾 SPA de France</span>
+              <!-- Item 2 -->
+              <span class="logo-item">🐱 Fondation 30 Millions d'Amis</span>
+              <!-- Item 3 -->
+              <span class="logo-item">🐶 Refuge de l'Espoir</span>
+              <!-- Item 4 -->
+              <span class="logo-item">🐾 Fondation Brigitte Bardot</span>
+              <!-- Item 5 -->
+              <span class="logo-item">🐱 Association Féline</span>
+              <!-- Item 6 -->
+              <span class="logo-item">🐶 Ligue de Protection Animale</span>
+              <!-- Duplicate for infinite scroll -->
+              <span class="logo-item">🐾 SPA de France</span>
+              <span class="logo-item">🐱 Fondation 30 Millions d'Amis</span>
+              <span class="logo-item">🐶 Refuge de l'Espoir</span>
+              <span class="logo-item">🐾 Fondation Brigitte Bardot</span>
+              <span class="logo-item">🐱 Association Féline</span>
+              <span class="logo-item">🐶 Ligue de Protection Animale</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section (Download App) -->
+    <section class="cta-section reveal" id="download">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <h2>Trouvez l'amour à quatre pattes dès aujourd'hui.</h2>
+          <p>Téléchargez gratuitement l'application Matchever, remplissez votre profil de personnalité et découvrez les dizaines d'animaux en refuge près de chez vous qui n'attendent que vous.</p>
+          
+          <div class="app-badges">
+            <!-- App Store Badge -->
+            <a href="https://www.apple.com/app-store/" class="app-badge-btn" target="_blank" rel="noopener noreferrer" aria-label="Télécharger Matchever sur l'App Store - Ouvre une nouvelle fenêtre">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.71,19.5C17.88,20.74,17,21.95,15.66,21.97c-1.34,0-1.77-.81-3.3-.81s-2,.79-3.3.84C7.74,22,6.76,20.69,5.92,19.5,4.21,17,2.91,12.39,4.67,9.35c.87-1.51,2.43-2.47,4.12-2.5,1.28,0,2.49.89,3.28.89s2.2-.1,3.75.16a5.59,5.59,0,0,1,4.38,2.44,5.43,5.43,0,0,0-2.61,4.55,5.54,5.54,0,0,0,3.37,5.06A13.72,13.72,0,0,1,18.71,19.5M15.91,4.89a5.16,5.16,0,0,0,1.2-3.64,5.29,5.29,0,0,0-3.46,1.77,5.09,5.09,0,0,0-1.25,3.52A4.61,4.61,0,0,0,15.91,4.89Z"/>
+              </svg>
+              <div class="app-badge-text">
+                <span class="app-badge-small">Disponible sur l'</span>
+                <span class="app-badge-large">App Store</span>
+              </div>
+            </a>
+            <!-- Google Play Badge -->
+            <a href="https://play.google.com/store" class="app-badge-btn" target="_blank" rel="noopener noreferrer" aria-label="Télécharger Matchever sur Google Play - Ouvre une nouvelle fenêtre">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3,5.27V18.73L16.55,12L3,5.27M17.87,11.33L19.46,12.12L17.87,12.92L17.87,11.33M3.55,4.1L16.82,10.74L19.86,5.71L3.55,4.1M3.55,19.9L19.86,18.29L16.82,13.26L3.55,19.9Z"/>
+              </svg>
+              <div class="app-badge-text">
+                <span class="app-badge-small">Disponible sur</span>
+                <span class="app-badge-large">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-phone-mockup" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400'); background-size: cover; background-position: center;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Matchever - Retour à l'accueil">
+          <svg class="logo-heart" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span>Matchever</span>
+        </a>
+        <p>L'application solidaire qui réinvente l'adoption animale en alliant science comportementale et éthique.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" class="social-btn" aria-label="Visiter notre page Instagram - Ouvre une nouvelle fenêtre" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5Z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com" class="social-btn" aria-label="Visiter notre page Facebook - Ouvre une nouvelle fenêtre" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com" class="social-btn" aria-label="Visiter notre profil Twitter / X - Ouvre une nouvelle fenêtre" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Application</h4>
+        <ul class="footer-links">
+          <li><a href="#concept">Comment ça marche</a></li>
+          <li><a href="#quiz">Le Quiz en ligne</a></li>
+          <li><a href="#showcase">Découvrir les profils</a></li>
+          <li><a href="#download">Télécharger l'app</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Partenariats</h4>
+        <ul class="footer-links">
+          <li><a href="#">Rejoindre comme refuge</a></li>
+          <li><a href="#">Recommandations Vétérinaires</a></li>
+          <li><a href="#">Charte Éthique d'Adoption</a></li>
+          <li><a href="#">Soutenir l'association</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact & Aide</h4>
+        <ul class="footer-links">
+          <li><a href="#">Centre d'Assistance</a></li>
+          <li><a href="#">Presse & Médias</a></li>
+          <li><a href="#">Contactez-nous</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Matchever. Tous droits réservés. Développé avec amour pour nos fidèles compagnons.</p>
+      <div class="footer-legal-links">
+        <a href="#">Accessibilité : partiellement conforme</a>
+        <a href="#">Politique de Confidentialité</a>
+        <a href="#">Conditions Générales</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
 </body>
 </html>
