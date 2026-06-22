@@ -3642,3 +3642,483 @@ section {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/* ============================================
+   INTERACTIVE ADOPTION SIMULATOR (Scrollytelling)
+   ============================================ */
+.scrolly-problem-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  margin-top: 80px;
+  align-items: start;
+}
+
+.scrolly-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scrolly-step {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid rgba(29, 45, 68, 0.1);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.scrolly-step:hover {
+  opacity: 0.9;
+  transform: translateX(4px);
+}
+
+.scrolly-step.active {
+  opacity: 1;
+  background: var(--bg-white);
+  border-left-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+}
+
+.scrolly-step.active[data-step="4"] {
+  border-left-color: var(--secondary);
+}
+
+.scrolly-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.scrolly-badge.impulse {
+  background-color: #FFEBEB;
+  color: #C92A3E;
+}
+
+.scrolly-badge.housing {
+  background-color: #FFF3E0;
+  color: #E65100;
+}
+
+.scrolly-badge.time {
+  background-color: #EDE7F6;
+  color: #5E35B1;
+}
+
+.scrolly-badge.solution {
+  background-color: var(--secondary-light);
+  color: var(--secondary-dark);
+}
+
+.scrolly-step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scrolly-step p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Simulator Card Sticky Frame */
+.scrolly-visual-column {
+  position: sticky;
+  top: 110px;
+  z-index: 5;
+}
+
+.simulator-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.simulator-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.simulator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.simulator-dot.red {
+  background-color: #EF4444;
+}
+
+.simulator-dot.yellow {
+  background-color: #F59E0B;
+}
+
+.simulator-dot.green {
+  background-color: #10B981;
+}
+
+.simulator-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-left: 4px;
+}
+
+.sim-visual-display {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #E2E8F0;
+}
+
+.sim-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sim-scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.sim-overlay-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(29, 45, 68, 0.85);
+  color: var(--bg-white);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.sim-details {
+  padding: 24px;
+}
+
+.sim-pet-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.sim-pet-name {
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sim-pet-breed {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.sim-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.metric-track {
+  width: 140px;
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal), background-color var(--transition-normal);
+}
+
+.metric-fill.energy {
+  background-color: var(--primary);
+}
+
+.metric-fill.space {
+  background-color: var(--secondary);
+}
+
+.metric-fill.time-bar {
+  background-color: var(--accent);
+}
+
+/* Happiness Indicator Circle box */
+.happiness-score-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.happiness-score-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.happiness-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.happiness-label strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.happiness-label span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 900px) {
+  .scrolly-problem-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 50px;
+  }
+
+  .scrolly-visual-column {
+    position: static;
+  }
+
+  .scrolly-step.active {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   MOCKUP TÉLÉPHONE AGRANDI & SYSTÈME DE SWIPE
+   ========================================================================== */
+
+/* 1. Le conteneur principal du téléphone */
+.hero-phone {
+  width: 360px;
+  /* Largeur augmentée pour un affichage plus grand */
+  height: 720px;
+  /* Hauteur proportionnelle (format 18:9 moderne) */
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  /* Si vous utilisez des effets de rotation/3D */
+}
+
+/* Si votre structure utilise la classe .px pour la coque du téléphone */
+.px {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 2. L'écran du téléphone */
+.px__screen {
+  position: absolute;
+  top: 12px;
+  /* Ajustez selon l'épaisseur de la bordure supérieure de votre coque */
+  left: 12px;
+  /* Ajustez selon la bordure gauche */
+  right: 12px;
+  /* Ajustez selon la bordure droite */
+  bottom: 12px;
+  /* Ajustez selon la bordure inférieure */
+  background-color: #000;
+  border-radius: 32px;
+  /* Coins arrondis du smartphone */
+  overflow: hidden;
+  /* Masque tout ce qui dépasse de l'écran */
+}
+
+.px__screen__frame {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* 3. L'interface de l'application à l'intérieur du téléphone */
+.app-interface {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  /* Fond de l'application */
+}
+
+/* Mini Header de l'application */
+.app-header-mini {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #1d2d44;
+  /* Votre couleur primaire */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 4. Le conteneur de cartes (Prend tout l'espace central disponible) */
+.swipe-cards-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* La carte d'animal en elle-même */
+.swipe-card {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  /* Limite la hauteur de la carte pour laisser de la place aux boutons */
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-end;
+  /* Aligne le texte en bas de l'image */
+  overflow: hidden;
+}
+
+/* Dégradé noir sur le texte pour garantir la lisibilité */
+.card-info {
+  width: 100%;
+  padding: 20px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.card-info h3 {
+  font-size: 1.4rem;
+  margin: 0 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-badge {
+  background: #2a9d8f;
+  /* Vert Matchever */
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* 5. Les boutons d'action de swipe en bas */
+.swipe-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.swipe-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.swipe-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-dislike {
+  background-color: #fff;
+  color: #e53e3e;
+  /* Rouge */
+  border: 1px solid #fed7d7;
+}
+
+.btn-info {
+  background-color: #fff;
+  color: #3182ce;
+  /* Bleu */
+  border: 1px solid #bee3f8;
+  width: 40px;
+  /* Un peu plus petit pour le bouton info centrale */
+  height: 40px;
+}
+
+.btn-like {
+  background-color: #fff;
+  color: #2a9d8f;
+  /* Vert */
+  border: 1px solid #b2f5ea;
+}

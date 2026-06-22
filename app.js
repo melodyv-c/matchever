@@ -420,4 +420,136 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================
+     5. SIMULATEUR D'ADOPTION INTERACTIF (Scrollytelling)
+     ========================================== */
+  const scrollySteps = document.querySelectorAll('.scrolly-step');
+  const simPetImg = document.getElementById('sim-pet-img');
+  const simStatusTag = document.getElementById('sim-status-tag');
+  const simPetName = document.getElementById('sim-pet-name');
+  const simPetBreed = document.getElementById('sim-pet-breed');
+  const metricEnergy = document.getElementById('metric-energy');
+  const metricSpace = document.getElementById('metric-space');
+  const metricTime = document.getElementById('metric-time');
+  const happinessCircle = document.getElementById('happiness-circle');
+  const happinessVal = document.getElementById('happiness-val');
+  const happinessDesc = document.getElementById('happiness-desc');
+
+  const stepData = {
+    1: {
+      img: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400",
+      tag: "Coup de cœur en ligne 📸",
+      name: "Max, 2 ans",
+      breed: "Retriever Énergique",
+      energy: "95%",
+      space: "100%",
+      time: "100%",
+      happyVal: "80%",
+      happyDesc: "Adopté sur un coup de cœur visuel",
+      happyBg: "var(--primary-light)",
+      happyColor: "var(--primary)"
+    },
+    2: {
+      img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400",
+      tag: "40m² sans balcon 🏢",
+      name: "Max, 2 ans",
+      breed: "Retriever Énergique",
+      energy: "95%",
+      space: "25%",
+      time: "100%",
+      happyVal: "40%",
+      happyDesc: "Manque d'espace et frustration",
+      happyBg: "#FFF3E0",
+      happyColor: "#E65100"
+    },
+    3: {
+      img: "https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&q=80&w=400",
+      tag: "8h seul par jour 😢",
+      name: "Max, 2 ans",
+      breed: "Retriever Énergique",
+      energy: "95%",
+      space: "25%",
+      time: "15%",
+      happyVal: "15%",
+      happyDesc: "Ennui, solitude et destruction",
+      happyBg: "#FFEBEE",
+      happyColor: "#C62828"
+    },
+    4: {
+      img: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&q=80&w=400",
+      tag: "98% Affinité Matchever 💚",
+      name: "Oliver, 1 an",
+      breed: "Siamois Calme",
+      energy: "30%",
+      space: "100%",
+      time: "100%",
+      happyVal: "98%",
+      happyDesc: "Adoption responsable, chat comblé !",
+      happyBg: "var(--secondary-light)",
+      happyColor: "var(--secondary)"
+    }
+  };
+
+  function updateSimulator(stepNum) {
+    const data = stepData[stepNum];
+    if (!data) return;
+
+    // Animating image transition
+    simPetImg.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+    simPetImg.style.transform = 'scale(1.05)';
+    simPetImg.style.opacity = '0.3';
+    simStatusTag.style.opacity = '0';
+
+    setTimeout(() => {
+      simPetImg.src = data.img;
+      simStatusTag.textContent = data.tag;
+      simPetName.textContent = data.name;
+      simPetBreed.textContent = data.breed;
+      
+      metricEnergy.style.width = data.energy;
+      metricSpace.style.width = data.space;
+      metricTime.style.width = data.time;
+
+      happinessVal.textContent = data.happyVal;
+      happinessDesc.textContent = data.happyDesc;
+      happinessCircle.style.backgroundColor = data.happyBg;
+      happinessCircle.style.color = data.happyColor;
+
+      simPetImg.style.transform = 'scale(1)';
+      simPetImg.style.opacity = '1';
+      simStatusTag.style.opacity = '1';
+    }, 200);
+  }
+
+  // Click to navigate
+  scrollySteps.forEach(step => {
+    step.addEventListener('click', () => {
+      scrollySteps.forEach(s => s.classList.remove('active'));
+      step.classList.add('active');
+      const stepNum = parseInt(step.getAttribute('data-step'));
+      updateSimulator(stepNum);
+    });
+  });
+
+  // Optional: IntersectionObserver to sync with scroll
+  if ('IntersectionObserver' in window) {
+    const scrollyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const step = entry.target;
+          scrollySteps.forEach(s => s.classList.remove('active'));
+          step.classList.add('active');
+          const stepNum = parseInt(step.getAttribute('data-step'));
+          updateSimulator(stepNum);
+        }
+      });
+    }, {
+      threshold: 0.6,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    scrollySteps.forEach(step => scrollyObserver.observe(step));
+  }
+
 });
+
