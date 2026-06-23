@@ -150,72 +150,113 @@
           </div>
 
           <!-- Phone Frame Container -->
-          <div class="hero-mockup-wrapper">
+          <div class="temp-wrapper hero-phone">
+            <div class="px">
 
-            <!-- Floating notifications (tu peux les garder) -->
-            <div class="floating-element float-1" aria-hidden="true">
-              <div class="float-icon">🐾</div>
-              <div class="float-text">
-                <p>Match à 98% !</p>
-                <h4>Tobby & Thomas</h4>
+              <div class="px__body">
+                <div class="px__body__cut"></div>
+                <div class="px__body__speaker"></div>
+                <div class="px__body__sensor"></div>
+
+                <div class="px__body__mute"></div>
+                <div class="px__body__up"></div>
+                <div class="px__body__down"></div>
+                <div class="px__body__right"></div>
               </div>
-            </div>
 
-            <div class="floating-element float-2" aria-hidden="true">
-              <div class="float-icon">❤️</div>
-              <div class="float-text">
-                <p>Adoption validée !</p>
-                <h4>Luna a trouvé son foyer</h4>
-              </div>
-            </div>
+              <div class="px__screen">
+                <div class="px__screen__">
+                  <div class="px__screen__frame">
 
-            <!-- NEW PHONE MOCKUP -->
-            <div class="temp-wrapper hero-phone">
-              <div class="px">
-
-                <div class="px__body">
-                  <div class="px__body__cut"></div>
-                  <div class="px__body__speaker"></div>
-                  <div class="px__body__sensor"></div>
-
-                  <div class="px__body__mute"></div>
-                  <div class="px__body__up"></div>
-                  <div class="px__body__down"></div>
-                  <div class="px__body__right"></div>
-                </div>
-
-                <div class="px__screen">
-                  <div class="px__screen__">
-                    <div class="px__screen__frame">
-
-                      <div class="app-interface">
-                        <div class="app-header-mini">
-                          <span class="app-logo-mini">🐾 Matchever</span>
-                        </div>
-
-                        <div class="swipe-cards-container">
-                          <div class="swipe-card"
-                            style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%), ">
-                            <div class="card-info">
-                              <h3>Tobby, 2 ans <span class="match-badge">98% Match</span></h3>
-                              <p>🐕 Refuge de Bordeaux • Énergique & Joueur</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="swipe-actions">
-                          <button class="swipe-btn btn-dislike" aria-label="Passer">✕</button>
-                          <button class="swipe-btn btn-info" aria-label="Plus d'infos">ℹ</button>
-                          <button class="swipe-btn btn-like" aria-label="Liker">❤️</button>
+                    <div class="app-interface">
+                      <!-- iOS Status Bar -->
+                      <div class="status-bar">
+                        <span class="status-time">9:41</span>
+                        <div class="status-icons">
+                          <!-- Signal, Wifi, Battery using SVGs -->
+                          <svg class="status-icon" width="17" height="11" viewBox="0 0 17 11" fill="currentColor">
+                            <rect x="0" y="8" width="3" height="3" rx="0.5"/>
+                            <rect x="4" y="6" width="3" height="5" rx="0.5"/>
+                            <rect x="8" y="4" width="3" height="7" rx="0.5"/>
+                            <rect x="12" y="1" width="3" height="10" rx="0.5"/>
+                          </svg>
+                          <svg class="status-icon" width="15" height="11" viewBox="0 0 15 11" fill="currentColor">
+                            <path d="M7.5 1.5C9.7 1.5 11.7 2.3 13.3 3.7L14.7 2.3C12.7 0.6 10.2 0 7.5 0C4.8 0 2.3 0.6 0.3 2.3L1.7 3.7C3.3 2.3 5.3 1.5 7.5 1.5Z"/>
+                            <path d="M7.5 4.5C8.8 4.5 10 5 10.9 5.8L12.3 4.4C11 3.2 9.3 2.5 7.5 2.5C5.7 2.5 4 3.2 2.7 4.4L4.1 5.8C5 5 6.2 4.5 7.5 4.5Z"/>
+                            <path d="M7.5 7.5C8.2 7.5 8.9 7.8 9.4 8.3L7.5 10.2L5.6 8.3C6.1 7.8 6.8 7.5 7.5 7.5Z"/>
+                          </svg>
+                          <svg class="status-icon" width="22" height="11" viewBox="0 0 22 11" fill="currentColor">
+                            <rect x="0.5" y="0.5" width="18" height="10" rx="2.5" fill="none" stroke="currentColor"/>
+                            <rect x="2" y="2" width="12" height="7" rx="1.5"/>
+                            <path d="M20 3.5C20.5 3.8 21 4.3 21 5C21 5.7 20.5 6.2 20 6.5V3.5Z"/>
+                          </svg>
                         </div>
                       </div>
 
-                    </div>
-                  </div>
+                      <div class="app-header-title">
+                        <h2>Les animaux compatibles<br><span class="accent-bold">avec vous</span></h2>
+                      </div>
 
+                      <div class="swipe-cards-container" id="card-deck">
+                        <div class="swipe-card"
+                          style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%), url('https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=600')">
+                          <div class="card-stamp like">ADOPTER</div>
+                          <div class="card-stamp nope">PASSE</div>
+                          
+                          <!-- Top bar inside card -->
+                          <div class="card-top-bar">
+                            <div class="card-top-left" style="display: flex; align-items: center; gap: 8px;">
+                              <button class="card-star-btn" aria-label="Favori">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                              </button>
+                              <span class="card-distance-badge">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px; transform: rotate(45deg);"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                                2.5 km
+                              </span>
+                            </div>
+
+                            <!-- Compatibility Pill on top-right -->
+                            <div class="compatibility-pill">
+                              <div class="progress-circle">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                  <path class="circle" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span class="progress-text">92%</span>
+                              </div>
+                              <span class="compatibility-label">Compatible</span>
+                            </div>
+                          </div>
+
+                          <!-- Scroll Indicator on right -->
+                          <div class="card-scroll-indicator"></div>
+
+                          <div class="card-info">
+                            <h3>Caramel, 2 ans</h3>
+                            <p>Golden retriever, Mâle, Stérilisé</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swipe-actions">
+                        <button class="swipe-btn btn-dislike" id="swipe-nope" aria-label="Passer">
+                          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                        <button class="swipe-btn btn-like" id="swipe-like" aria-label="Liker">
+                          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </div>
                 </div>
               </div>
+
             </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Le Problème Section -->
@@ -482,10 +523,28 @@
         </div>
 
         <div class="cta-phone-mockup" aria-hidden="true">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen"
-              style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400'); background-size: cover; background-position: center;">
+          <div class="temp-wrapper hero-phone">
+            <div class="px">
+
+              <div class="px__body">
+                <div class="px__body__cut"></div>
+                <div class="px__body__speaker"></div>
+                <div class="px__body__sensor"></div>
+
+                <div class="px__body__mute"></div>
+                <div class="px__body__up"></div>
+                <div class="px__body__down"></div>
+                <div class="px__body__right"></div>
+              </div>
+
+              <div class="px__screen">
+                <div class="px__screen__">
+                  <div class="px__screen__frame"
+                    style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400');">
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
