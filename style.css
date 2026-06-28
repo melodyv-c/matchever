@@ -1,34 +1,52 @@
+#rive-cat-button {
+  overflow: hidden;
+  position: relative;
+  width: 166px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+#rive-cat-canvas {
+  position: absolute;
+  transform: translate(-50%, calc(-50% + 25px));
+}
+
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,300..700;1,300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,300..700;1,300..700&display=swap");
 
 /* Design System Variables */
 :root {
-  --primary: #1E4A68;
+  --primary: #1e4a68;
   --primary-hover: #153348;
   --primary-light: rgba(30, 74, 104, 0.08);
   --primary-dark: #153348;
-  --secondary: #A82830;
+  --secondary: #a82830;
   --secondary-hover: #862026;
   --secondary-light: rgba(168, 40, 48, 0.08);
   --secondary-dark: #862026;
-  --accent: #C48010;
+  --accent: #c48010;
 
   /* Background colors */
-  --bg-primary: #F3F0EC;
-  --bg-secondary: #E4DDD5;
-  --bg-white: #FFFFFF;
-  --bg-dark: #1A1A1A;
+  --bg-primary: #f3f0ec;
+  --bg-secondary: #e4ddd5;
+  --bg-white: #ffffff;
+  --bg-dark: #1a1a1a;
 
   /* Text colors */
-  --text-primary: #1A1A1A;
-  --text-secondary: #4A4A4A;
-  --text-light: #7E7E7E;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-light: #7e7e7e;
 
   /* Shadow & borders */
   --border-color: rgba(26, 26, 26, 0.08);
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 10px 15px -3px rgba(26, 26, 26, 0.08), 0 4px 6px -2px rgba(26, 26, 26, 0.04);
-  --shadow-lg: 0 20px 25px -5px rgba(26, 26, 26, 0.12), 0 10px 10px -5px rgba(26, 26, 26, 0.06);
+  --shadow-sm:
+    0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-md:
+    0 10px 15px -3px rgba(26, 26, 26, 0.08),
+    0 4px 6px -2px rgba(26, 26, 26, 0.04);
+  --shadow-lg:
+    0 20px 25px -5px rgba(26, 26, 26, 0.12),
+    0 10px 10px -5px rgba(26, 26, 26, 0.06);
   --shadow-card: 0 30px 60px -15px rgba(26, 26, 26, 0.15);
 
   /* Transitions */
@@ -73,7 +91,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -84,7 +102,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-primary);
@@ -149,7 +167,6 @@ select:focus-visible,
   border: 0;
 }
 
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -160,7 +177,7 @@ select:focus-visible,
   border-radius: var(--radius-full);
   font-weight: 600;
   transition: var(--transition-normal);
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
 }
 
 .btn-primary {
@@ -258,7 +275,7 @@ select:focus-visible,
 .app-badge-large {
   font-size: 0.95rem;
   font-weight: 700;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
 }
 
 /* Header & Navigation */
@@ -297,7 +314,7 @@ select:focus-visible,
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Agbalumo', cursive;
+  font-family: "Agbalumo", cursive;
   font-weight: 800;
   font-size: 1.5rem;
   color: var(--text-primary);
@@ -322,7 +339,7 @@ select:focus-visible,
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -439,8 +456,17 @@ section {
 .hero {
   padding-top: 180px;
   padding-bottom: 120px;
-  background: radial-gradient(circle at 80% 20%, rgba(255, 90, 95, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 10% 80%, rgba(42, 157, 143, 0.04) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 90, 95, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(42, 157, 143, 0.04) 0%,
+      transparent 50%
+    );
   overflow: hidden;
 }
 
@@ -481,7 +507,7 @@ section {
 
 .hero-rating {
   display: flex;
-  color: #FFB020;
+  color: #ffb020;
 }
 
 /* Phone Mockup & Card Swipe Widget */
@@ -522,7 +548,7 @@ section {
 
 .phone-screen {
   flex: 1;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -540,7 +566,7 @@ section {
 }
 
 .screen-logo {
-  font-family: 'Agbalumo', cursive;
+  font-family: "Agbalumo", cursive;
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--primary);
@@ -553,7 +579,7 @@ section {
   width: 28px;
   height: 28px;
   border-radius: var(--radius-full);
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   overflow: hidden;
 }
 
@@ -579,7 +605,9 @@ section {
   cursor: grab;
   user-select: none;
   transform-origin: 50% 100%;
-  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    opacity var(--transition-normal);
 }
 
 .swipe-card.dragging {
@@ -590,7 +618,7 @@ section {
 .card-img-container {
   flex: 1;
   position: relative;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   overflow: hidden;
 }
 
@@ -633,15 +661,15 @@ section {
 
 .card-stamp.like {
   left: 20px;
-  border-color: #2A9D8F;
-  color: #2A9D8F;
+  border-color: #2a9d8f;
+  color: #2a9d8f;
   transform: rotate(-10deg);
 }
 
 .card-stamp.nope {
   right: 20px;
-  border-color: #FF5A5F;
-  color: #FF5A5F;
+  border-color: #ff5a5f;
+  color: #ff5a5f;
   transform: rotate(10deg);
 }
 
@@ -668,14 +696,14 @@ section {
   font-size: 0.7rem;
   padding: 3px 8px;
   border-radius: var(--radius-full);
-  background-color: #EDF2F7;
+  background-color: #edf2f7;
   color: var(--text-secondary);
   font-weight: 500;
 }
 
 .card-tag.pet-match {
-  background-color: #E6FFFA;
-  color: #1A7F64;
+  background-color: #e6fffa;
+  color: #1a7f64;
 }
 
 .card-loc {
@@ -741,7 +769,7 @@ section {
 }
 
 .btn-swipe.info:hover {
-  background-color: #EDF2F7;
+  background-color: #edf2f7;
   color: var(--text-primary);
 }
 
@@ -901,7 +929,7 @@ section {
 }
 
 .step-num {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 5rem;
   font-weight: 800;
   line-height: 1;
@@ -971,7 +999,7 @@ section {
 
 .quiz-progress {
   height: 6px;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   border-radius: var(--radius-full);
   margin-bottom: 40px;
   overflow: hidden;
@@ -1046,7 +1074,7 @@ section {
 }
 
 .quiz-option.selected .option-dot::after {
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
@@ -1117,7 +1145,7 @@ section {
 .result-img {
   height: 240px;
   position: relative;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
 }
 
 .result-img img {
@@ -1279,7 +1307,7 @@ section {
 .pet-img-container {
   height: 220px;
   position: relative;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
 }
 
 .pet-img-container img {
@@ -1370,8 +1398,17 @@ section {
 
 /* Testimonials Section */
 .testimonials {
-  background: radial-gradient(circle at 10% 20%, rgba(42, 157, 143, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 90, 95, 0.03) 0%, transparent 40%);
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(42, 157, 143, 0.03) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 90, 95, 0.03) 0%,
+      transparent 40%
+    );
 }
 
 .testimonials-grid {
@@ -1391,7 +1428,7 @@ section {
 }
 
 .testimonial-rating {
-  color: #FFB020;
+  color: #ffb020;
   font-size: 1.1rem;
   margin-bottom: 16px;
 }
@@ -1414,7 +1451,7 @@ section {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   overflow: hidden;
 }
 
@@ -1458,7 +1495,7 @@ section {
 }
 
 .stat-item h3 {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
   color: var(--primary);
@@ -1498,8 +1535,20 @@ section {
   width: 100%;
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .logo-track {
@@ -1512,7 +1561,7 @@ section {
 
 .logo-item {
   color: rgba(255, 255, 255, 0.4);
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   display: flex;
@@ -1554,26 +1603,34 @@ section {
 }
 
 .cta-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -20%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(194, 195, 196, 0.438) 0%, transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(194, 195, 196, 0.438) 0%,
+    transparent 60%
+  );
   z-index: 1;
 }
 
 .cta-container::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -40%;
   left: -20%;
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(42, 157, 143, 0.15) 0%, transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(42, 157, 143, 0.15) 0%,
+    transparent 60%
+  );
   z-index: 1;
 }
 
@@ -1733,7 +1790,9 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .reveal.revealed {
@@ -1752,18 +1811,22 @@ section {
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
 }
 
 .page-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
 .page-hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1829,14 +1892,13 @@ section {
 .page-hero-orb-2 {
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, rgba(42, 157, 143, 0.10), transparent);
+  background: radial-gradient(circle, rgba(42, 157, 143, 0.1), transparent);
   bottom: -60px;
   left: 20%;
   animation-delay: 4s;
 }
 
 @keyframes orbPulse {
-
   0%,
   100% {
     transform: scale(1) translate(0, 0);
@@ -1868,7 +1930,9 @@ section {
   padding: 40px;
   position: relative;
   overflow: hidden;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .bento-card:hover {
@@ -1877,7 +1941,7 @@ section {
 }
 
 .bento-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1912,7 +1976,6 @@ section {
 }
 
 @media (max-width: 900px) {
-
   .bento-wide,
   .bento-narrow,
   .bento-half,
@@ -1934,7 +1997,11 @@ section {
 }
 
 .bento-card-icon.secondary {
-  background: linear-gradient(135deg, var(--secondary-light), rgba(42, 157, 143, 0.15));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-light),
+    rgba(42, 157, 143, 0.15)
+  );
 }
 
 .bento-card h3 {
@@ -1950,7 +2017,7 @@ section {
 
 /* Big stat inside bento */
 .bento-stat-big {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 5rem;
   font-weight: 800;
   line-height: 1;
@@ -1981,7 +2048,11 @@ section {
   align-items: flex-start;
   gap: 20px;
   padding: 20px 24px;
-  background: linear-gradient(135deg, rgba(253, 251, 247, 0.9), rgba(246, 243, 236, 0.7));
+  background: linear-gradient(
+    135deg,
+    rgba(253, 251, 247, 0.9),
+    rgba(246, 243, 236, 0.7)
+  );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(229, 62, 66, 0.12);
   border-radius: var(--radius-md);
@@ -1991,7 +2062,7 @@ section {
 }
 
 .mission-value::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -2017,7 +2088,7 @@ section {
   font-size: 1.05rem;
   color: var(--text-primary);
   margin-bottom: 4px;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
 }
 
 .mission-value p {
@@ -2072,16 +2143,24 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  background: linear-gradient(135deg, var(--primary-light), rgba(231, 111, 81, 0.1));
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    rgba(231, 111, 81, 0.1)
+  );
   flex-shrink: 0;
 }
 
 .overlay-icon.green {
-  background: linear-gradient(135deg, var(--secondary-light), rgba(42, 157, 143, 0.15));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-light),
+    rgba(42, 157, 143, 0.15)
+  );
 }
 
 .overlay-stat-num {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-primary);
@@ -2136,7 +2215,7 @@ section {
 }
 
 .team-img::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(29, 45, 68, 0.3), transparent 50%);
@@ -2271,7 +2350,11 @@ section {
    FAQ — Glassmorphism Sidebar + Accordion
    ============================================ */
 .faq-section {
-  background: linear-gradient(160deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(
+    160deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
 }
 
 .faq-container {
@@ -2307,7 +2390,7 @@ section {
 }
 
 .faq-nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -2370,7 +2453,7 @@ section {
 }
 
 .faq-group-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -2407,7 +2490,7 @@ section {
 .faq-question {
   padding: 20px 24px;
   font-weight: 600;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 1rem;
   color: var(--text-primary);
   cursor: pointer;
@@ -2425,7 +2508,7 @@ section {
 }
 
 .faq-question::after {
-  content: '+';
+  content: "+";
   font-size: 1.4rem;
   font-weight: 300;
   color: var(--primary);
@@ -2442,7 +2525,7 @@ section {
 }
 
 .faq-item[open] .faq-question::after {
-  content: '−';
+  content: "−";
   transform: rotate(180deg);
 }
 
@@ -2548,7 +2631,9 @@ section {
   font-size: 0.97rem;
   color: var(--text-primary);
   background: var(--bg-primary);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .form-group input:focus,
@@ -2589,7 +2674,11 @@ section {
 
 .form-success {
   padding: 16px 20px;
-  background: linear-gradient(135deg, var(--secondary-light), rgba(42, 157, 143, 0.08));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-light),
+    rgba(42, 157, 143, 0.08)
+  );
   border: 1px solid rgba(42, 157, 143, 0.3);
   border-radius: var(--radius-md);
   color: var(--secondary-dark);
@@ -2682,11 +2771,15 @@ section {
 }
 
 .map-placeholder::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 60% 40%, rgba(62, 148, 229, 0.15), transparent 50%),
+    radial-gradient(
+      circle at 60% 40%,
+      rgba(62, 148, 229, 0.15),
+      transparent 50%
+    ),
     radial-gradient(circle at 20% 70%, rgba(24, 103, 207, 0.1), transparent 50%);
 }
 
@@ -2698,7 +2791,6 @@ section {
 }
 
 @keyframes mapPinBounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -2758,7 +2850,11 @@ section {
    SUPPORT SECTION — Trendy option cards
    ============================================ */
 .support-section {
-  background: linear-gradient(135deg, var(--primary-light) 0%, rgba(231, 111, 81, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    rgba(231, 111, 81, 0.05) 100%
+  );
 }
 
 .support-options {
@@ -2789,7 +2885,7 @@ section {
 }
 
 .support-option-card::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(48, 120, 255, 0), transparent);
@@ -2856,7 +2952,7 @@ section {
 }
 
 .feature-card::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2882,15 +2978,17 @@ section {
   border-color: rgba(231, 111, 81, 0.2);
 }
 
-
-
 .feature-icon {
   font-size: 2rem;
   margin-bottom: 18px;
   display: block;
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--secondary-light), rgba(42, 157, 143, 0.08));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-light),
+    rgba(42, 157, 143, 0.08)
+  );
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -2898,7 +2996,11 @@ section {
 }
 
 .feature-card-premium .feature-icon {
-  background: linear-gradient(135deg, var(--primary-light), rgba(231, 111, 81, 0.1));
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    rgba(231, 111, 81, 0.1)
+  );
 }
 
 .feature-card h3 {
@@ -2955,7 +3057,11 @@ section {
    VISUAL STAT CARDS (refuge / eleveur pages)
    ============================================ */
 .visual-card {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    var(--secondary-dark) 100%
+  );
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   color: white;
@@ -2968,7 +3074,7 @@ section {
 }
 
 .visual-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -40%;
   right: -20%;
@@ -2979,7 +3085,7 @@ section {
 }
 
 .visual-card::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -30%;
   left: -10%;
@@ -2990,7 +3096,7 @@ section {
 }
 
 .visual-card-premium {
-  background: linear-gradient(135deg, #1D2D44 0%, #2d3748 100%);
+  background: linear-gradient(135deg, #1d2d44 0%, #2d3748 100%);
   box-shadow: 0 24px 48px -12px rgba(29, 45, 68, 0.4);
 }
 
@@ -3013,7 +3119,7 @@ section {
 }
 
 .visual-stat-number {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1;
@@ -3030,7 +3136,11 @@ section {
    HIGHLIGHT SECTION (refuge page)
    ============================================ */
 .highlight-section {
-  background: linear-gradient(135deg, var(--primary-light) 0%, rgba(42, 157, 143, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    rgba(42, 157, 143, 0.05) 100%
+  );
   border-top: 1px solid rgba(42, 96, 157, 0.1);
   border-bottom: 1px solid rgba(66, 156, 230, 0.1);
 }
@@ -3061,7 +3171,7 @@ section {
 
 .highlight-badge span {
   display: block;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 3rem;
   font-weight: 800;
   color: var(--primary);
@@ -3114,7 +3224,11 @@ section {
   display: block;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--secondary-light), rgba(42, 157, 143, 0.08));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-light),
+    rgba(42, 157, 143, 0.08)
+  );
   border-radius: 18px;
   display: flex;
   align-items: center;
@@ -3123,7 +3237,7 @@ section {
 }
 
 .impact-item h3 {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
@@ -3153,7 +3267,7 @@ section {
 }
 
 .process-steps::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 48px;
   left: 56px;
@@ -3176,7 +3290,7 @@ section {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary));
   color: white;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   display: flex;
@@ -3403,7 +3517,7 @@ section {
 }
 
 .price-amount {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 3rem;
   font-weight: 800;
   color: var(--primary);
@@ -3469,7 +3583,7 @@ section {
 
 .cta-store-divider::before,
 .cta-store-divider::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: rgba(255, 255, 255, 0.15);
@@ -3496,9 +3610,7 @@ section {
 }
 
 .shimmer-on-hover:hover {
-  background: linear-gradient(90deg,
-      var(--primary) 0%,
-      var(--primary) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 100%);
   background-size: 200% auto;
   animation: shimmer 1.5s linear infinite;
   -webkit-background-clip: text;
@@ -3535,7 +3647,7 @@ section {
 }
 
 .scroll-indicator-wheel::after {
-  content: '';
+  content: "";
   width: 4px;
   height: 8px;
   background: var(--primary);
@@ -3548,7 +3660,6 @@ section {
 }
 
 @keyframes scrollWheel {
-
   0%,
   100% {
     transform: translateX(-50%) translateY(0);
@@ -3562,7 +3673,6 @@ section {
 }
 
 @keyframes scrollIndicatorFade {
-
   0%,
   100% {
     opacity: 0.5;
@@ -3678,18 +3788,18 @@ section {
 }
 
 .scrolly-badge.impulse {
-  background-color: #FFEBEB;
-  color: #C92A3E;
+  background-color: #ffebeb;
+  color: #c92a3e;
 }
 
 .scrolly-badge.housing {
-  background-color: #FFF3E0;
-  color: #E65100;
+  background-color: #fff3e0;
+  color: #e65100;
 }
 
 .scrolly-badge.time {
-  background-color: #EDE7F6;
-  color: #5E35B1;
+  background-color: #ede7f6;
+  color: #5e35b1;
 }
 
 .scrolly-badge.solution {
@@ -3742,15 +3852,15 @@ section {
 }
 
 .simulator-dot.red {
-  background-color: #EF4444;
+  background-color: #ef4444;
 }
 
 .simulator-dot.yellow {
-  background-color: #F59E0B;
+  background-color: #f59e0b;
 }
 
 .simulator-dot.green {
-  background-color: #10B981;
+  background-color: #10b981;
 }
 
 .simulator-title {
@@ -3766,7 +3876,7 @@ section {
   position: relative;
   height: 240px;
   overflow: hidden;
-  background: #E2E8F0;
+  background: #e2e8f0;
 }
 
 .sim-scene {
@@ -3810,7 +3920,7 @@ section {
 }
 
 .sim-pet-name {
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -3851,7 +3961,9 @@ section {
 .metric-fill {
   height: 100%;
   border-radius: var(--radius-full);
-  transition: width var(--transition-normal), background-color var(--transition-normal);
+  transition:
+    width var(--transition-normal),
+    background-color var(--transition-normal);
 }
 
 .metric-fill.energy {
@@ -3882,7 +3994,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
   transition: all var(--transition-normal);
@@ -3960,7 +4072,7 @@ section {
   box-shadow: inset 0 0 3px 1px #000;
 }
 
-.px--ls>.px__body {
+.px--ls > .px__body {
   top: 1%;
   right: 0;
   bottom: 1%;
@@ -3969,27 +4081,27 @@ section {
 }
 
 .px__body:before {
-  content: '';
+  content: "";
   position: absolute;
-  top: .7%;
+  top: 0.7%;
   right: 1.4%;
-  bottom: .7%;
+  bottom: 0.7%;
   left: 1.4%;
   background-color: #000;
   border-radius: 13%/7%;
   box-shadow: 0 0 3px #000;
 }
 
-.px--ls>.px__body:before {
+.px--ls > .px__body:before {
   top: 1.4%;
-  right: .7%;
+  right: 0.7%;
   bottom: 1.4%;
-  left: .7%;
+  left: 0.7%;
   border-radius: 7%/13%;
 }
 
 .px__body:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 1%;
   right: 2.3%;
@@ -4000,7 +4112,7 @@ section {
   border-radius: 13%/6.5%;
 }
 
-.px--ls>.px__body:after {
+.px--ls > .px__body:after {
   top: 2.3%;
   right: 1%;
   bottom: 2.3%;
@@ -4042,14 +4154,14 @@ section {
   top: 4%;
   left: 50%;
   width: 12%;
-  height: .8%;
+  height: 0.8%;
   border-radius: 5px;
 }
 
 .px--ls .px__body__speaker {
   top: 50%;
   left: 4%;
-  width: .8%;
+  width: 0.8%;
   height: 12%;
 }
 
@@ -4092,7 +4204,9 @@ section {
 .px__body__right {
   position: absolute;
   background-color: #b5b8ba;
-  box-shadow: inset 0 5px 5px -3px rgba(0, 0, 0, .5), inset 0 -5px 5px -3px rgba(0, 0, 0, .5);
+  box-shadow:
+    inset 0 5px 5px -3px rgba(0, 0, 0, 0.5),
+    inset 0 -5px 5px -3px rgba(0, 0, 0, 0.5);
   transform: translate(0, -50%);
 }
 
@@ -4100,7 +4214,9 @@ section {
 .px--ls .px__body__up,
 .px--ls .px__body__down,
 .px--ls .px__body__right {
-  box-shadow: inset 5px 0 5px -3px rgba(0, 0, 0, .5), inset -5px 0 5px -3px rgba(0, 0, 0, .5);
+  box-shadow:
+    inset 5px 0 5px -3px rgba(0, 0, 0, 0.5),
+    inset -5px 0 5px -3px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, 0);
 }
 
@@ -4110,8 +4226,8 @@ section {
 
 .px__body__mute {
   top: 14.7%;
-  left: -.7%;
-  width: .7%;
+  left: -0.7%;
+  width: 0.7%;
   height: 4%;
   border-radius: 1px 0 0 1px;
 }
@@ -4119,9 +4235,9 @@ section {
 .px--ls .px__body__mute {
   top: auto;
   left: 14.7%;
-  bottom: -.7%;
+  bottom: -0.7%;
   width: 4%;
-  height: .7%;
+  height: 0.7%;
   border-radius: 0 0 1px 1px;
 }
 
@@ -4206,7 +4322,6 @@ section {
   background-position: center center;
 }
 
-
 /* 3. L'interface de l'application à l'intérieur du téléphone */
 .app-interface {
   width: 100%;
@@ -4262,7 +4377,9 @@ section {
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 .app-header-title .accent-bold {
@@ -4364,7 +4481,8 @@ section {
   font-weight: 800;
   margin: 0 0 2px 0;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .card-info p {
@@ -4451,7 +4569,9 @@ section {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   background-color: #fff;
 }
 
