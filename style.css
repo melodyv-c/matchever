@@ -60,35 +60,35 @@
 /* Variante HEADER (nav-cta) — même design "carte à jouer" que
    le bouton Télécharger (fond mauve, bordure, ombre pop, pilule) */
 #rive-cat-button-nav {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 116px;
-  height: 58px;
-  flex-shrink: 0;
-  border-radius: var(--radius-full);
-  background: var(--primary);
-  border: 2.5px solid var(--primary-700);
-  box-shadow: var(--shadow-pop-primary);
-  overflow: hidden;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 116px !important;
+  height: 58px !important;
+  flex-shrink: 0 !important;
+  border-radius: var(--radius-full) !important;
+  background: var(--primary) !important;
+  border: 2.5px solid var(--primary-700) !important;
+  box-shadow: var(--shadow-pop-primary) !important;
+  overflow: hidden !important;
   transition: var(--transition-bounce);
 }
 
 #rive-cat-button-nav:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0px var(--primary-700);
+  box-shadow: 7px 7px 0px var(--primary-700) !important;
 }
 
 #rive-cat-button-nav:active {
   transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0px var(--primary-700);
+  box-shadow: 2px 2px 0px var(--primary-700) !important;
 }
 
 @media (max-width: 900px) {
   #rive-cat-button-nav {
-    width: 96px;
-    height: 48px;
+    width: 96px !important;
+    height: 48px !important;
   }
 }
 
@@ -2568,6 +2568,43 @@ body {
 
 .page-hero-faq {
   background: linear-gradient(180deg, var(--primary-50) 0%, var(--bg-primary) 100%);
+}
+
+/* Mascotte chien centrée, glissée dans l'espace libre entre le
+   bloc de texte/boutons et le mockup téléphone — comme le golden
+   retriever dans la section téléchargement de l'accueil. */
+.cta-dog {
+  position: absolute;
+  right: 430px;
+  bottom: 70px;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+  transform: scaleX(-1);
+  filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 1024px) {
+  .cta-dog {
+    display: none;
+  }
+}
+
+/* Mascotte chien centrée au-dessus d'un titre de section
+   (about / faq / contact) — sticker simple, sans mise en page
+   complexe, pour rester lisible sur toutes les sections. */
+.section-mascot-top {
+  display: block;
+  margin: 0 auto 18px;
+  width: 120px;
+  filter: drop-shadow(0 12px 18px rgba(26, 24, 25, 0.15));
+}
+
+@media (max-width: 600px) {
+  .section-mascot-top {
+    width: 90px;
+  }
 }
 
 .scroll-indicator {
