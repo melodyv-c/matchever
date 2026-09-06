@@ -57,21 +57,37 @@
   }
 }
 
-/* Variante HEADER (nav-cta) */
+/* Variante HEADER (nav-cta) — même design "carte à jouer" que
+   le bouton Télécharger (fond mauve, bordure, ombre pop, pilule) */
 #rive-cat-button-nav {
   position: relative;
-  width: 56px;
-  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 58px;
   flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  border: 2.5px solid var(--primary-700);
+  box-shadow: var(--shadow-pop-primary);
+  overflow: hidden;
+  transition: var(--transition-bounce);
 }
 
 #rive-cat-button-nav:hover {
-  transform: scale(1.08);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px var(--primary-700);
+}
+
+#rive-cat-button-nav:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px var(--primary-700);
 }
 
 @media (max-width: 900px) {
   #rive-cat-button-nav {
-    width: 48px;
+    width: 96px;
     height: 48px;
   }
 }
