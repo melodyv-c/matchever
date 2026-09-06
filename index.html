@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -70,6 +70,11 @@
         <a href="faq.html" class="nav-link">FAQ</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <div class="nav-cta">
+          <button id="rive-cat-button-nav" type="button" data-rive-src="button.riv"
+            data-rive-state-machine="State Machine 1" class="rive-btn is-ready"
+            aria-label="Aller aux liens de téléchargement de l'application">
+            <canvas id="rive-cat-canvas-nav" aria-hidden="true" width="600" height="300"></canvas>
+          </button>
           <a href="#download" class="btn btn-primary" id="header-cta-btn">Télécharger l'app</a>
         </div>
       </nav>
@@ -80,11 +85,19 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+      <!-- Orbes de fond animées -->
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="section-tag">L'Adoption Responsable</span>
-          <h1>Trouvez le compagnon de vie qui vous <span class="text">ressemble</span> vraiment.</h1>
-          <p>Fini les adoptions sur un coup de tête ! Matchever évalue vos modes de vie et personnalités pour vous
+          <div class="deco-sticker-anchor">
+            <span class="section-tag">L'Adoption Responsable</span>
+            <img src="paw-pink.png" alt="" aria-hidden="true" class="deco-sticker deco-sticker-hero">
+          </div>
+          <h1>Trouvez le compagnon de vie qui vous <span class="gradient-text">ressemble</span> vraiment.</h1>
+          <p class="hero-slogan">Fini les adoptions sur un coup de tête ! Matchever évalue vos modes de vie et
+            personnalités pour vous
             proposer les chiens et chats en refuge qui s'adapteront parfaitement à votre quotidien !</p>
 
           <div class="hero-badges-wrapper">
@@ -127,12 +140,13 @@
               <span>Plus de 50 000 adoptions réussies • Gratuit &amp; solidaire</span>
             </div>
           </div>
-          
+
           <!-- Button Rive -->
-            <button id="rive-cat-button" type="button" data-rive-src="button.riv"
-              data-rive-state-machine="State Machine 1" aria-label="Aller aux liens de téléchargement de l'application">
-              <canvas id="rive-cat-canvas" aria-hidden="true"></canvas>
-            </button>
+          <button id="rive-cat-button" type="button" data-rive-src="button.riv"
+            data-rive-state-machine="State Machine 1" class="rive-btn is-ready"
+            aria-label="Aller aux liens de téléchargement de l'application">
+            <canvas id="rive-cat-canvas" aria-hidden="true"></canvas>
+          </button>
         </div>
 
         <!-- Interactive Card Swipe Mockup -->
@@ -263,11 +277,16 @@
     <!-- Concept Section -->
     <section class="concept reveal" id="concept">
       <div class="container text-center">
-        <span class="section-tag section-tag-secondary">Le Concept</span>
-        <h2 class="section-title">Une méthode scientifique pour une adoption réussie.</h2>
-        <p class="section-desc">L'adoption est un acte fort qui engage toute une vie. Matchever applique les
-          neurosciences comportementales animales pour aligner la personnalité de l'adoptant et celle de l'animal,
-          éliminant ainsi les risques d'incompatibilité.</p>
+        <div class="concept-intro">
+          <img src="dog-corgi.png" alt="" aria-hidden="true" class="deco-dog deco-dog-concept">
+          <div class="concept-intro-text">
+            <span class="section-tag section-tag-secondary">Le Concept</span>
+            <h2 class="section-title">Une méthode scientifique pour une adoption réussie.</h2>
+            <p class="section-desc">L'adoption est un acte fort qui engage toute une vie. Matchever applique les
+              neurosciences comportementales animales pour aligner la personnalité de l'adoptant et celle de l'animal,
+              éliminant ainsi les risques d'incompatibilité.</p>
+          </div>
+        </div>
 
         <div class="steps-grid">
           <!-- Step 1 -->
@@ -438,6 +457,7 @@
           </div>
         </div>
 
+        <img src="dog-golden.png" alt="" aria-hidden="true" class="deco-dog deco-dog-cta">
         <div class="cta-phone-mockup" aria-hidden="true">
           <div class="temp-wrapper hero-phone">
             <div class="px">
@@ -476,6 +496,7 @@
         <a href="index.html" class="logo" aria-label="Matchever - Retour à l'accueil">
           <img src="logo.svg" alt="" class="logo-img" aria-hidden="true" width="24" height="24">
           <span>Matchever</span>
+          <img src="paw-orange.png" alt="" aria-hidden="true" class="deco-sticker deco-sticker-footer">
         </a>
         <p>L'application solidaire qui réinvente l'adoption animale en alliant science comportementale et éthique.</p>
         <div class="social-links">
