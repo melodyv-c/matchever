@@ -61,64 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================
-   3. BOUTONS RIVE (hero + header)
-   ========================================== */
-  const riveButtons = document.querySelectorAll('[data-rive-src]');
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-
-  riveButtons.forEach((riveButton) => {
-    const riveCanvas = riveButton.querySelector("canvas");
-    if (!riveCanvas) return;
-
-    // Clic → scroll vers la section téléchargement
-    riveButton.addEventListener("click", () => {
-      const downloadSection = document.getElementById("download");
-      if (downloadSection) {
-        downloadSection.scrollIntoView({
-          behavior: prefersReducedMotion ? "auto" : "smooth",
-          block: "start",
-        });
-      }
-    });
-
-    // Init Rive si la lib est chargée
-    if (window.rive && typeof window.rive.Rive === "function") {
-      let riveInstance = null;
-      const riveStateMachine = riveButton.dataset.riveStateMachine;
-
-      riveInstance = new window.rive.Rive({
-        src: riveButton.dataset.riveSrc || "button.riv",
-        canvas: riveCanvas,
-        autoplay: !prefersReducedMotion,
-        stateMachines: riveStateMachine || undefined,
-        isTouchScrollEnabled: true,
-        layout: new window.rive.Layout({
-          fit: window.rive.Fit.Contain,
-          alignment: window.rive.Alignment.Center,
-        }),
-        onLoad: () => {
-          riveInstance.resizeDrawingSurfaceToCanvas(2);
-          riveButton.classList.add("is-ready");
-          if (prefersReducedMotion) {
-            riveInstance.pause();
-          }
-        },
-        onLoadError: () => {
-          riveButton.hidden = true;
-        },
-      });
-
-      window.addEventListener("resize", () => {
-        riveInstance.resizeDrawingSurfaceToCanvas(2);
-      });
-    } else {
-      riveButton.hidden = true;
-    }
-  });
-
-  /* ==========================================
      4. DECK INTERACTIF DE CARTES (SWIPE WIDGET)
      ========================================== */
   const cardDeck = document.getElementById("card-deck");
